@@ -78,6 +78,17 @@ html.popup-open {
   border-color: #7c3aed;
 }
 
+#popup-close img {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%) hue-rotate(293deg) brightness(104%) contrast(90%);
+  transition: filter 0.2s ease;
+  pointer-events: none;
+  display: block;
+}
+
+#popup-close:hover img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+}
+
 /* Blog post styling inside popup */
 #popup-content h1 {
   color: #f472b6;
@@ -181,6 +192,8 @@ html.popup-open {
   box-shadow: 4px 4px 0px #1e1b3d;
   transition: all 0.2s ease;
   text-shadow: 1px 1px 0px #7c2d92;
+  align-items: center;
+  justify-content: center;
 }
 
 #back-to-top:hover {
@@ -191,8 +204,19 @@ html.popup-open {
   border-color: #7c3aed;
 }
 
-#back-to-top.show {
+#back-to-top img {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%) hue-rotate(293deg) brightness(104%) contrast(90%);
+  transition: filter 0.2s ease;
+  pointer-events: none;
   display: block;
+}
+
+#back-to-top:hover img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+}
+
+#back-to-top.show {
+  display: flex;
 }
 
 /* Back to Top Button for Popup */
@@ -214,6 +238,8 @@ html.popup-open {
   box-shadow: 4px 4px 0px #1e1b3d;
   transition: all 0.2s ease;
   text-shadow: 1px 1px 0px #7c2d92;
+  align-items: center;
+  justify-content: center;
 }
 
 #popup-back-to-top:hover {
@@ -224,6 +250,17 @@ html.popup-open {
   border-color: #7c3aed;
 }
 
-#popup-back-to-top.show {
+#popup-back-to-top img {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%) hue-rotate(293deg) brightness(104%) contrast(90%);
+  transition: filter 0.2s ease;
+  pointer-events: none;
   display: block;
+}
+
+#popup-back-to-top:hover img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+}
+
+#popup-back-to-top.show {
+  display: flex;
 }

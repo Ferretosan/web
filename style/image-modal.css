@@ -58,3 +58,14 @@
   box-shadow: 6px 6px 0px #1e1b3d;
   border-color: #7c3aed;
 }
+
+#close-modal img {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%) hue-rotate(293deg) brightness(104%) contrast(90%);
+  transition: filter 0.2s ease;
+  pointer-events: none;
+  display: block;
+}
+
+#close-modal:hover img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+}
