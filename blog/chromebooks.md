@@ -4,13 +4,13 @@ I hate Chromebooks. I mean, they're supposedly the fastest computer that can run
 
 Today I'm going to cover why I absolutely hate Chromebooks, and what could redeem them.
 
-## Why I hate them.
+## Why I hate them
 
 Chromebooks may seem like some amazing things that will let you browse the web with ease. Let me tell you a funny story.
 
 I had to do a science project and I needed to have an encyvlopedia and Google Docs open. I opened my Google Docs thing, and it was already starting to lag with nothing else open. I opened the encyclopedia, and ... nothing happened when I moved the mouse. I managed to actively crash a Chromebook with 2 tabs.
 
-### Lightning round!
+### Lightning round
 
 Number 1. There's good Chromebooks ... that are garbage. Even the so-called good chromebooks with like 8gb ram and a decent processor fail to run YouTube and Google Docs. A good analogy ChatGPT gave me is that's a digital whack-a-mole. To be honest, very true.
 

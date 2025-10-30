@@ -1,6 +1,7 @@
 ## Introduction
 
 So, do you choose Minecraft Java Edition or Minecraft Bedrock Edition? Well, there are reasons for both, and I'll cover why you might choose one or another. But, this might be a little bit biasted because I am a massive Java player on Prism.
+
 ## Bedrock Edition
 
 It's no secret that Microsoft is trying to make Bedrock the main version of Minecraft, and for a big reason. Bedrock is being pushed forward because it is on almost any device and operating system, except for Linux and Mac. Another reason is that Bedrock is more profitable - look at the marketplace! A texture pack for 30 dollars!? Why do I have to pay? Yes, you can manually find some on some very strange websites, but just why?
@@ -11,7 +12,7 @@ And then, if you want to truly customize your experience with mods, then you hav
 
 What if you want to play an older version? You can't. So, you now pay for a game to not be able to enjoy it, and can't play older versions for some old memories, I think that Microsoft is torturing their very fragile playerbase. Well, you can - but do you really want to visit some really sketchy sites? Oh, you don't? Too bad, so sad.
 
-##Java Edition
+## Java Edition
 
 Java Editon was the first version of Minecraft, so it but be better - and it is. Very, very better. But, every good thing has problems. Let's start with optimization. Java Editon runs on outdated OpenGL technology, so it is bound to be slow as OpenGL was originally made for Windows 98, so from 1998 - that's a long time ago! Even on decent hardware, you can be expecting around 60 frames per second on deafult settings. That's not very good. But, with some amazing mods, you can be expecting around 300 frames - much better!
 

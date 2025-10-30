@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Basiic';
-    src: url(basiic.ttf);
+  font-family: 'Basiic';
+  src: url(../fonts/basiic.ttf);
 }
 
 body {
@@ -250,11 +250,13 @@ p {
 }
 
 /* Webring alignment */
-#ckwr, #gfdkris {
+#ckwr,
+#gfdkris {
   text-align: left !important;
 }
 
-#ckwr *, #gfdkris * {
+#ckwr *,
+#gfdkris * {
   text-align: left !important;
   margin-left: 0 !important;
   margin-right: auto !important;
