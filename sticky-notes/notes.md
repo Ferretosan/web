@@ -1,11 +1,3 @@
 # notie notes
 
-## Working on
-
-- New breakcore tracks
-- Improving this website!
-
-## Listening to
-
-- usedcvnt
-- c418
+this website is version **9.3.2**
