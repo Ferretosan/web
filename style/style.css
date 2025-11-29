@@ -408,3 +408,22 @@ p {
 .add88x31 > a {
   display: block;
 }
+
+/* Floating left sidebar (desktop only, no mobile considerations) */
+/* 88x31 section with pinned side info */
+.buttons-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: start;
+  gap: 20px;
+}
+
+.pinned-side-info {
+  position: sticky;
+  top: 90px; /* sticks relative to viewport while scrolling */
+}
+
+/* Slightly reduce textarea font inside sidebar */
+.pinned-side-info textarea {
+  font-size: 0.75em;
+}
