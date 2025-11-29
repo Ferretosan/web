@@ -60,6 +60,27 @@ a:hover {
   top: 0;
   z-index: 100;
   transition: all 0.3s ease;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav::-webkit-scrollbar {
+  height: 8px;
+}
+
+.nav::-webkit-scrollbar-track {
+  background: #1e1b3d;
+  border-radius: 0px;
+}
+
+.nav::-webkit-scrollbar-thumb {
+  background: #6d28d9;
+  border-radius: 0px;
+}
+
+.nav::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
 }
 
 .nav a {
@@ -180,6 +201,48 @@ ul a:hover li {
   border: 3px dashed #6d28d9;
   box-shadow: 4px 4px 0px #1e1b3d;
   font-family: Basiic;
+}
+
+.section-with-info {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  align-items: stretch;
+}
+
+.section-with-info .buttons-88x31 {
+  flex: 1;
+  margin: 0;
+}
+
+.side-info {
+  min-width: 200px;
+  max-width: 250px;
+  padding: 15px;
+  background: #2d1b40;
+  border: 2px solid #6d28d9;
+  border-radius: 0px;
+  box-shadow: 4px 4px 0px #1e1b3d;
+  font-size: 0.9em;
+  align-self: flex-start;
+}
+
+.side-info p {
+  margin: 8px 0;
+}
+
+.side-info strong {
+  color: #f472b6;
+}
+
+@media (max-width: 768px) {
+  .section-with-info {
+    flex-direction: column;
+  }
+  
+  .side-info {
+    max-width: 100%;
+  }
 }
 
 .buttons-88x31 {
@@ -319,4 +382,29 @@ p {
 .scale-in.visible {
   opacity: 1;
   transform: scale(1);
+}
+
+/* Simple textarea container for button code (minimal, ready for future styling) */
+.button-code-box {
+  margin-top: 10px;
+}
+
+.button-code-box textarea {
+  width: 100%;
+  background: #2d1b40;
+  color: #e879f9;
+  border: 2px solid #4c1d95;
+  resize: vertical;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 0.8em;
+  box-sizing: border-box;
+}
+
+.add88x31 > :not(.button-code-box) {
+  text-align: center;
+}
+
+.add88x31 > a {
+  display: block;
 }
