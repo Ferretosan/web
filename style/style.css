@@ -2,9 +2,17 @@
   font-family: 'Basiic';
   src: url(../fonts/basiic.ttf);
 }
+@font-face {
+  font-family: 'Rubik';
+  src: url(../fonts/Rubik-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: 'SS4';
+  src: url(../fonts/ss4.ttf);
+}
 
 body {
-  font-family: 'Basiic';
+  font-family: 'Rubik';
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -21,7 +29,7 @@ h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
   font-weight: bold;
-  font-family: Basiic;
+  font-family: 'Basiic';
 }
 
 h2 {
@@ -200,7 +208,7 @@ ul a:hover li {
   border-radius: 0px;
   border: 3px dashed #6d28d9;
   box-shadow: 4px 4px 0px #1e1b3d;
-  font-family: Basiic;
+  font-family: 'Rubik';
 }
 
 
@@ -296,7 +304,7 @@ ul a:hover li {
 
 /* Add some retro text effects */
 p {
-  font-family: Basiic;
+  font-family: 'Rubik';
   text-shadow: 1px 1px 0px #1e1b3d;
 }
 
@@ -436,4 +444,8 @@ p {
   border-color: #7c3aed;
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0px #1e1b3d;
+}
+
+hr {
+  color: #fa9be7;
 }

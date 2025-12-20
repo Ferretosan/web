@@ -13,6 +13,9 @@ function parseMarkdown(markdown) {
   html = html.replace(/^## (.*$)/gim, '<h2 class="slide-in-right">$1</h2>');
   html = html.replace(/^# (.*$)/gim, '<h1 class="fade-in">$1</h1>');
   
+  // Horizontal rules
+  html = html.replace(/^\s*(?:-{3,}|\*{3,}|_{3,})\s*$/gm, '<hr>');
+  
   // Bold
   html = html.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
   
@@ -48,7 +51,7 @@ function parseMarkdown(markdown) {
     if (!para) return '';
     
     // Skip if it's already wrapped in block elements
-    if (para.match(/^<(h[1-6]|ul|ol|pre|div)/)) {
+    if (para.match(/^<(h[1-6]|ul|ol|pre|div|hr)/)) {
       return para;
     }
     
