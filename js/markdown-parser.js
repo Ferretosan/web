@@ -65,6 +65,21 @@ function parseMarkdown(markdown) {
   return html;
 }
 
+// Blog post hash/file mappings
+const blogHashToFile = {
+  '#blog-font': 'font.md',
+  '#blog-aseprite': 'aesprite.md',
+  '#blog-chromebooks': 'chromebooks.md',
+  '#blog-mcjob': 'mcjob.md'
+};
+
+const blogFileToHash = {
+  'font.md': '#blog-font',
+  'aesprite.md': '#blog-aseprite',
+  'chromebooks.md': '#blog-chromebooks',
+  'mcjob.md': '#blog-mcjob'
+};
+
 // Function to load and display blog post
 async function loadBlogPost(filename) {
   try {
@@ -78,6 +93,12 @@ async function loadBlogPost(filename) {
     
     // Display in popup
     popupwindowstart(html);
+
+    // Update URL to reflect the blog post slug without navigation
+    const newHash = blogFileToHash[filename];
+    if (newHash && window.location.hash !== newHash) {
+      window.history.replaceState(null, null, newHash);
+    }
     
     // Initialize scroll animations for popup content
     setTimeout(() => {
@@ -114,17 +135,8 @@ async function loadBlogPost(filename) {
 // Handle hash navigation for blog posts on page load
 document.addEventListener('DOMContentLoaded', function() {
   const hash = window.location.hash;
-  
-  // Map hash to blog post filenames
-  const blogPosts = {
-    '#blog-font': 'font.md',
-    '#blog-aseprite': 'aesprite.md',
-    '#blog-chromebooks': 'chromebooks.md',
-    '#blog-mcjob': 'mcjob.md'
-  };
-  
   // If hash matches a blog post, load it
-  if (blogPosts[hash]) {
-    loadBlogPost(blogPosts[hash]);
+  if (blogHashToFile[hash]) {
+    loadBlogPost(blogHashToFile[hash]);
   }
 });

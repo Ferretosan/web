@@ -58,15 +58,21 @@ document.addEventListener('DOMContentLoaded', function () {
   const hashObserver = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting && entry.target.id) {
-        // Update hash without reloading
-        window.history.replaceState(null, null, '#' + entry.target.id);
+        // Update hash without reloading; avoid n/a changes
+        const newHash = '#' + entry.target.id;
+        if (window.location.hash !== newHash) {
+          window.history.replaceState(null, null, newHash);
+        }
       }
     });
   }, hashObserverOptions);
 
-  // Observe all sections with IDs, excluding ckwr and gfdkris
-  const sections = document.querySelectorAll('[id]:not(popup-overlay):not(popup-content):not(popup-window):not(popup-close):not(popup-back-to-top):not(sticky-notes-container):not(ckwr):not(gfdkris)');
-  sections.forEach(section => hashObserver.observe(section));
+  // Observe only sections linked from the main nav
+  const navAnchors = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
+  const sectionTargets = navAnchors
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+  sectionTargets.forEach(section => hashObserver.observe(section));
 });
 
 // (Removed neko logic) -- scroll.js now only handles animations and UI buttons.

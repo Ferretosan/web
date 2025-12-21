@@ -216,6 +216,21 @@ html.popup-open {
 #back-to-top:hover img {
   filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
 }
+#popup-copy-link img {
+  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%) hue-rotate(293deg) brightness(104%) contrast(90%);
+  transition: filter 0.2s ease;
+  pointer-events: none;
+  display: block;
+}
+
+#popup-copy-link:hover img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+}
+
+/* Flash copied state: same as hover color */
+#popup-copy-link.copied img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+}
 
 #back-to-top.show {
   display: flex;
@@ -267,6 +282,46 @@ html.popup-open {
   display: flex;
 }
 
+/* Copy Link Button for Popup (icon) */
+#popup-copy-link {
+  position: fixed;
+  bottom: 20px; /* default: takes back-to-top place when it's hidden */
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: #2d1b40;
+  color: #f472b6;
+  border: 2px solid #6d28d9;
+  border-radius: 0;
+  font-size: 0.95rem;
+  font-family: 'Basiic', monospace;
+  cursor: pointer;
+  display: none;
+  z-index: 10002;
+  box-shadow: 4px 4px 0px #1e1b3d;
+  transition: all 0.2s ease;
+  text-shadow: 1px 1px 0px #7c2d92;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-copy-link:hover {
+  background: #4c1d95;
+  color: #fbbf24;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #1e1b3d;
+  border-color: #7c3aed;
+}
+
+#popup-copy-link.show {
+  display: flex;
+}
+
+/* When back-to-top is visible, place copy-link above it */
+#popup-copy-link.above {
+  bottom: 70px; /* 20px + 40px height + 10px gap */
+}
+
 /* Image mode (unified image modal styling) */
 #popup-overlay.image-mode {
   background: rgba(26, 11, 26, 0.97);
@@ -309,5 +364,9 @@ html.popup-open {
 }
 
 #popup-overlay.image-mode #popup-back-to-top {
+  display: none !important;
+}
+
+#popup-overlay.image-mode #popup-copy-link {
   display: none !important;
 }
