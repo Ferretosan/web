@@ -48,6 +48,25 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // Hash update on scroll
+  const hashObserverOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -50% 0px'
+  };
+
+  const hashObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.target.id) {
+        // Update hash without reloading
+        window.history.replaceState(null, null, '#' + entry.target.id);
+      }
+    });
+  }, hashObserverOptions);
+
+  // Observe all sections with IDs, excluding ckwr and gfdkris
+  const sections = document.querySelectorAll('[id]:not(popup-overlay):not(popup-content):not(popup-window):not(popup-close):not(popup-back-to-top):not(sticky-notes-container):not(ckwr):not(gfdkris)');
+  sections.forEach(section => hashObserver.observe(section));
 });
 
 // (Removed neko logic) -- scroll.js now only handles animations and UI buttons.

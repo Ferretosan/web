@@ -110,3 +110,21 @@ async function loadBlogPost(filename) {
     popupwindowstart('<h2>Error</h2><p>Sorry, could not load the blog post.</p>');
   }
 }
+
+// Handle hash navigation for blog posts on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const hash = window.location.hash;
+  
+  // Map hash to blog post filenames
+  const blogPosts = {
+    '#blog-font': 'font.md',
+    '#blog-aseprite': 'aesprite.md',
+    '#blog-chromebooks': 'chromebooks.md',
+    '#blog-mcjob': 'mcjob.md'
+  };
+  
+  // If hash matches a blog post, load it
+  if (blogPosts[hash]) {
+    loadBlogPost(blogPosts[hash]);
+  }
+});
