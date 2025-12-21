@@ -1,6 +1,6 @@
 # notie notes
 
-this website is version **9.4.2**
+this website is version **9.4.3**
 see whats new above!
 
 see the code at ferretosan/web on github

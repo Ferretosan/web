@@ -1,17 +1,35 @@
 /* sticky-notes.css - Completely redesigned */
-.sticky-notes-container {
+/* sticky-notes.css - Completely redesigned */
+#sticky-notes-wrapper {
   position: fixed;
   top: 120px;
   right: 20px;
   bottom: 20px;
   z-index: 500;
+  width: 270px; /* A bit wider to give notes room */
+  pointer-events: none; /* Wrapper doesn't block clicks */
+}
+
+/* sticky-notes.css - Completely redesigned */
+#sticky-notes-wrapper {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 500;
+  width: 270px; /* A bit wider to give notes room */
+  pointer-events: none; /* Wrapper doesn't block clicks */
+}
+
+.sticky-notes-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 250px;
   overflow-y: auto;
-  overflow-x: hidden;
-  padding-right: 10px;
+  overflow-x: visible;
+  padding: 10px;
+  pointer-events: auto; /* Notes are clickable */
 }
 
 /* Custom scrollbar for sticky notes */
@@ -175,7 +193,6 @@
 }
 
 #hub-button img {
-  display: block;
-  width: 128px;
-  height: 128px;
+  overflow: visible; /* allow notes/shadows to extend beyond container */
+  padding-right: 10px; /* keep padding for aesthetics */
 }
