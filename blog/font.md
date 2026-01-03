@@ -35,7 +35,7 @@ Quick interjection! I'm going to try updating this blog bi-weekly, so stay tuned
 
 I almost forgot, it's flippin December ALREADY. I just want this part of the blog to say "Merry Christmas". I'll see you all next year!
 
---- 
+---
 
 じゃあね！
 (Bye!)

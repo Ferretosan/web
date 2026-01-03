@@ -67,6 +67,7 @@ function parseMarkdown(markdown) {
 
 // Blog post hash/file mappings
 const blogHashToFile = {
+  '#blog-newyear26': 'newyear26.md',
   '#blog-font': 'font.md',
   '#blog-aseprite': 'aesprite.md',
   '#blog-chromebooks': 'chromebooks.md',
@@ -74,6 +75,7 @@ const blogHashToFile = {
 };
 
 const blogFileToHash = {
+  'newyear26.md': '#blog-newyear26',
   'font.md': '#blog-font',
   'aesprite.md': '#blog-aseprite',
   'chromebooks.md': '#blog-chromebooks',
@@ -91,29 +93,8 @@ async function loadBlogPost(filename) {
     const markdown = await response.text();
     const html = parseMarkdown(markdown);
     
-    // Create a container for Giscus comments
-    const giscusContainer = `
-      <div class="giscus-container" style="margin-top: 40px;">
-        <script src="https://giscus.app/client.js"
-          data-repo="ferretosan/ferretosan-web"
-          data-repo-id="R_kgDOMa725A"
-          data-category="General"
-          data-category-id="DIC_kwDOMa725M4ChZ3L"
-          data-mapping="pathname"
-          data-strict="0"
-          data-reactions-enabled="1"
-          data-emit-metadata="0"
-          data-input-position="top"
-          data-theme="transparent_dark"
-          data-lang="en"
-          crossorigin="anonymous"
-          async>
-        </script>
-      </div>
-    `;
-
-    // Display blog post and comments in popup
-    popupwindowstart(html + giscusContainer);
+    // Display in popup
+    popupwindowstart(html);
 
     // Update URL to reflect the blog post slug without navigation
     const newHash = blogFileToHash[filename];
