@@ -65,6 +65,49 @@ function parseMarkdown(markdown) {
   return html;
 }
 
+// ---- Utterances comments config ----
+const UTTERANCES_REPO = "Ferretosan/web-blog-comments";
+const UTTERANCES_THEME = "github-light";
+
+// Inject (or replace) the Utterances widget inside targetEl.
+// postId is used as the issue title so each post gets its own stable thread.
+function injectUtterances(targetEl, postId) {
+  if (!targetEl) return;
+
+  // Remove any existing Utterances iframe/container when switching posts
+  const existing = targetEl.querySelector('.utterances');
+  if (existing) existing.remove();
+
+  // Use document.title to pass the stable postId to Utterances (issue-term="title").
+  // We set it briefly while the script loads, then restore the original title.
+  // This avoids any URL or og:title hacking and gives a clean, deterministic mapping.
+  const originalTitle = document.title;
+  document.title = postId;
+
+  const s = document.createElement('script');
+  s.src = 'https://utteranc.es/client.js';
+  s.async = true;
+  s.crossOrigin = 'anonymous';
+  s.setAttribute('repo', UTTERANCES_REPO);
+  s.setAttribute('issue-term', 'title');
+  s.setAttribute('theme', UTTERANCES_THEME);
+  s.setAttribute('label', 'blog-comment');
+
+  // Restore the original page title after Utterances has had time to read it.
+  // The script reads document.title synchronously on execution, so the load event
+  // fires after the title has been captured. A setTimeout fallback guards against
+  // any async initialisation in the Utterances client.
+  s.addEventListener('load', function() {
+    setTimeout(function() { document.title = originalTitle; }, 0);
+  });
+  // Restore on error too
+  s.addEventListener('error', function() {
+    document.title = originalTitle;
+  });
+
+  targetEl.appendChild(s);
+}
+
 // Blog post hash/file mappings
 const blogHashToFile = {
   '#blog-newyear26': 'newyear26.md',
@@ -125,6 +168,21 @@ async function loadBlogPost(filename) {
         // Observe all animated elements in the popup
         const animatedElements = popupContent.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
         animatedElements.forEach(el => observer.observe(el));
+
+        // Append comments section and inject Utterances widget
+        const comments = document.createElement('div');
+        comments.id = 'blog-comments';
+        const hr = document.createElement('hr');
+        const heading = document.createElement('h2');
+        heading.className = 'slide-in-right';
+        heading.textContent = 'Comments';
+        comments.appendChild(hr);
+        comments.appendChild(heading);
+        popupContent.appendChild(comments);
+
+        // Use "blog/<filename>" as the stable, deterministic issue title per post
+        const postId = `blog/${filename}`;
+        injectUtterances(comments, postId);
       }
     }, 100); // Small delay to ensure popup is fully rendered
     
