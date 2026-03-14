@@ -19,3 +19,15 @@ Before contributing, please read the following:
 
 - [Ferretosan](https://github.com/ferretosan)
 - [proplayer919](https://github.com/proplayer919)
+
+## Comments (Utterances)
+
+Blog post comments are powered by [Utterances](https://utteranc.es/), which stores threads as GitHub Issues in [`Ferretosan/web-blog-comments`](https://github.com/Ferretosan/web-blog-comments).
+
+### Setup steps
+
+1. **Install the Utterances GitHub App** on the `Ferretosan/web-blog-comments` repository:
+   - Visit <https://github.com/apps/utterances> and grant access to `Ferretosan/web-blog-comments`.
+2. **Ensure the repo is public** – Utterances requires a public repository to create and read issues.
+3. The embed is already wired up in `js/markdown-parser.js`. Each blog post gets its own GitHub Issue titled `blog/<filename>` (e.g. `blog/newyear26.md`), providing a stable, deterministic mapping regardless of URL changes.
+4. To change the comment theme, update `UTTERANCES_THEME` at the top of `js/markdown-parser.js`. Available themes: `github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`, `boxy-light`.
