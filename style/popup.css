@@ -322,6 +322,24 @@ html.popup-open {
   bottom: 70px; /* 20px + 40px height + 10px gap */
 }
 
+/* Utterances comments embed */
+#utterances-container {
+  margin-top: 40px;
+  border-top: 3px solid #6d28d9;
+  padding-top: 10px;
+}
+
+#utterances-container .utterances {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+#utterances-container .utterances-frame {
+  width: 100% !important;
+  min-width: unset !important;
+  box-sizing: border-box;
+}
+
 /* Image mode (unified image modal styling) */
 #popup-overlay.image-mode {
   background: rgba(26, 11, 26, 0.97);
