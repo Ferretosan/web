@@ -5,6 +5,19 @@
 // markdown-parser.js - Simple Markdown to HTML parser
 // by Ferretosan !!!!
 
+// ---------------------------------------------------------------------------
+// Utterances comments configuration
+// TODO: Set UTTERANCES_REPO to the public GitHub repo where comment issues
+//       will be stored (format: "owner/repo", e.g. "Ferretosan/web").
+//       The repo must have the Utterances GitHub App installed:
+//       https://utteranc.es/
+// TODO: Optionally change UTTERANCES_THEME. Available themes:
+//       github-light, github-dark, github-dark-orange, icy-dark,
+//       dark-blue, photon-dark, gruvbox-dark, boxy-light, catppuccin-mocha
+// ---------------------------------------------------------------------------
+const UTTERANCES_REPO = 'Ferretosan/web';
+const UTTERANCES_THEME = 'photon-dark';
+
 function parseMarkdown(markdown) {
   let html = markdown;
   
@@ -82,6 +95,43 @@ const blogFileToHash = {
   'mcjob.md': '#blog-mcjob'
 };
 
+// Inject Utterances comments widget for the given blog filename.
+// Uses createElement('script') so the script executes even after
+// popup content is set via innerHTML.
+function addUtterancesComments(filename) {
+  const popupContent = document.getElementById('popup-content');
+  if (!popupContent) {
+    console.warn('addUtterancesComments: #popup-content not found');
+    return;
+  }
+
+  // Remove any pre-existing Utterances container (e.g. from a previous post)
+  const existing = popupContent.querySelector('#utterances-container');
+  if (existing) existing.remove();
+
+  // Wrapper div with a "Comments" heading
+  const container = document.createElement('div');
+  container.id = 'utterances-container';
+
+  const heading = document.createElement('h2');
+  heading.className = 'slide-in-right';
+  heading.textContent = 'Comments';
+  container.appendChild(heading);
+
+  // Build the Utterances <script> tag via DOM so it actually runs
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.setAttribute('repo', UTTERANCES_REPO);
+  // Use the filename as a stable, unique issue term per post (e.g. "blog/newyear26.md")
+  script.setAttribute('issue-term', 'blog/' + filename);
+  script.setAttribute('theme', UTTERANCES_THEME);
+  script.setAttribute('crossorigin', 'anonymous');
+  script.async = true;
+  container.appendChild(script);
+
+  popupContent.appendChild(container);
+}
+
 // Function to load and display blog post
 async function loadBlogPost(filename) {
   try {
@@ -95,6 +145,9 @@ async function loadBlogPost(filename) {
     
     // Display in popup
     popupwindowstart(html);
+
+    // Inject Utterances comments below the post content
+    addUtterancesComments(filename);
 
     // Update URL to reflect the blog post slug without navigation
     const newHash = blogFileToHash[filename];
