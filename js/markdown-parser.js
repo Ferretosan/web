@@ -5,6 +5,52 @@
 // markdown-parser.js - Simple Markdown to HTML parser
 // by Ferretosan !!!!
 
+// ---------------------------------------------------------------------------
+// Utterances comments configuration
+// Utterances stores comments as GitHub Issues in the repo below.
+// The repo must be public and have the Utterances GitHub App installed:
+// https://github.com/apps/utterances
+// Available themes: github-light, github-dark, preferred-color-scheme,
+//   github-dark-orange, icy-dark, dark-blue, photon-dark, boxy-light,
+//   catppuccin-mocha
+// ---------------------------------------------------------------------------
+const UTTERANCES_REPO = 'Ferretosan/web-blog-comments';
+const UTTERANCES_THEME = 'photon-dark';
+
+// Inject (or replace) the Utterances widget inside targetEl.
+// postId is used as the issue title so each post gets its own stable thread.
+function injectUtterances(targetEl, postId) {
+  if (!targetEl) return;
+
+  // Remove any existing Utterances iframe/container when switching posts
+  const existing = targetEl.querySelector('.utterances');
+  if (existing) existing.remove();
+
+  // Use document.title to pass the stable postId to Utterances (issue-term="title").
+  // We set it briefly while the script loads, then restore the original title.
+  const originalTitle = document.title;
+  document.title = postId;
+
+  const s = document.createElement('script');
+  s.src = 'https://utteranc.es/client.js';
+  s.async = true;
+  s.crossOrigin = 'anonymous';
+  s.setAttribute('repo', UTTERANCES_REPO);
+  s.setAttribute('issue-term', 'title');
+  s.setAttribute('theme', UTTERANCES_THEME);
+  s.setAttribute('label', 'blog-comment');
+
+  // Restore the original page title after Utterances has read it.
+  s.addEventListener('load', function() {
+    document.title = originalTitle;
+  });
+  s.addEventListener('error', function() {
+    document.title = originalTitle;
+  });
+
+  targetEl.appendChild(s);
+}
+
 function parseMarkdown(markdown) {
   let html = markdown;
   
@@ -125,6 +171,19 @@ async function loadBlogPost(filename) {
         // Observe all animated elements in the popup
         const animatedElements = popupContent.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
         animatedElements.forEach(el => observer.observe(el));
+
+        // Append comments section and inject Utterances widget
+        const comments = document.createElement('div');
+        comments.id = 'utterances-container';
+        const heading = document.createElement('h2');
+        heading.className = 'slide-in-right';
+        heading.textContent = 'Comments';
+        comments.appendChild(heading);
+        popupContent.appendChild(comments);
+
+        // Use "blog/<filename>" as the stable, deterministic issue title per post
+        const postId = 'blog/' + filename;
+        injectUtterances(comments, postId);
       }
     }, 100); // Small delay to ensure popup is fully rendered
     
