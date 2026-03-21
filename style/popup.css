@@ -226,13 +226,22 @@ html.popup-open {
 }
 
 /* Utterances comments embed styling */
-#utterances-container {
+#utterances-container,
+#utterances-container .utterances,
+#utterances-container .utterances-frame {
   margin-top: 0;
   border: none;
   background: transparent;
   padding: 0;
   border-radius: 0;
   box-shadow: none;
+  pointer-events: auto !important;
+}
+
+#popup-overlay,
+#popup-window,
+#popup-content {
+  pointer-events: auto !important;
 }
 
 #utterances-container h2 {
