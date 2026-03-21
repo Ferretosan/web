@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, observerOptions);
 
-  const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+  const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .slide-in-top, .scale-in, .photo-grid img');
   animatedElements.forEach(el => observer.observe(el));
 
   const backToTopButton = document.getElementById('back-to-top');

@@ -1,6 +1,6 @@
 # notie notes
 
-this website is version **9.5.2-hotfix-1**
+this website is version **9.5.3**
 see whats new above!
 
 see the code at ferretosan/web on github

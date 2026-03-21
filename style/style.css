@@ -3,20 +3,20 @@ html {
 }
 
 @font-face {
-  font-family: 'Basiic';
+  font-family: "Basiic";
   src: url(../fonts/basiic.ttf);
 }
 @font-face {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   src: url(../fonts/Rubik-VariableFont_wght.ttf);
 }
 @font-face {
-  font-family: 'SS4';
+  font-family: "SS4";
   src: url(../fonts/ss4.ttf);
 }
 
 body {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -33,7 +33,7 @@ h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
   font-weight: bold;
-  font-family: 'Basiic';
+  font-family: "Basiic";
 }
 
 h2 {
@@ -44,7 +44,8 @@ h2 {
   border-radius: 0px;
   background: #2d1b40;
   padding-left: 10px;
-  font-family: 'Basiic', 'Courier New', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-family:
+    "Basiic", "Courier New", "Monaco", "Menlo", "Consolas", monospace;
   text-shadow: 1px 1px 0px #4c1d95;
 }
 
@@ -102,7 +103,8 @@ a:hover {
   display: inline-block;
   border-radius: 0px;
   background: #1e1b3d;
-  font-family: 'Basiic', 'Courier New', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-family:
+    "Basiic", "Courier New", "Monaco", "Menlo", "Consolas", monospace;
   font-weight: bold;
 }
 
@@ -212,10 +214,8 @@ ul a:hover li {
   border-radius: 0px;
   border: 3px dashed #6d28d9;
   box-shadow: 4px 4px 0px #1e1b3d;
-  font-family: 'Rubik';
+  font-family: "Rubik";
 }
-
-
 
 .side-info {
   width: 100%;
@@ -239,7 +239,7 @@ ul a:hover li {
   .section-with-info {
     flex-direction: column;
   }
-  
+
   .side-info {
     max-width: 100%;
   }
@@ -308,7 +308,7 @@ ul a:hover li {
 
 /* Add some retro text effects */
 p {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   text-shadow: 1px 1px 0px #1e1b3d;
 }
 
@@ -329,7 +329,9 @@ p {
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .fade-in.visible {
@@ -354,7 +356,9 @@ p {
 .slide-in-left {
   opacity: 0;
   transform: translateX(-50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .slide-in-left.visible {
@@ -365,7 +369,9 @@ p {
 .slide-in-right {
   opacity: 0;
   transform: translateX(50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .slide-in-right.visible {
@@ -373,15 +379,90 @@ p {
   transform: translateX(0);
 }
 
+.slide-in-top {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.slide-in-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .scale-in {
   opacity: 0;
   transform: scale(0.8);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .scale-in.visible {
   opacity: 1;
   transform: scale(1);
+}
+
+.photo-grid img {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.photo-grid img:nth-child(1) {
+  transform: translateX(-50px);
+}
+
+.photo-grid img:nth-child(2) {
+  transform: translateX(50px);
+}
+
+.photo-grid img:nth-child(3) {
+  transform: translateY(-50px);
+}
+
+.photo-grid img:nth-child(4) {
+  transform: translateY(50px);
+}
+
+.photo-grid img:nth-child(5) {
+  transform: scale(0.8);
+}
+
+.photo-grid img:nth-child(6) {
+  transform: rotate(-5deg) scale(0.9);
+}
+
+.photo-grid img:nth-child(7) {
+  transform: translateX(-30px) rotate(-2deg);
+}
+
+.photo-grid img:nth-child(8) {
+  transform: translateX(30px) rotate(2deg);
+}
+
+.photo-grid img:nth-child(9) {
+  transform: translateY(-30px) rotate(-3deg);
+}
+
+.photo-grid img:nth-child(10) {
+  transform: translateY(30px) rotate(3deg);
+}
+
+.photo-grid img:nth-child(11) {
+  transform: translateX(-20px) translateY(-20px);
+}
+
+.photo-grid img:nth-child(12) {
+  transform: translateX(20px) translateY(20px);
+}
+
+.photo-grid img.visible {
+  opacity: 1;
+  transform: none;
 }
 
 /* Simple textarea container for button code (minimal, ready for future styling) */
