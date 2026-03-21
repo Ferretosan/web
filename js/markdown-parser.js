@@ -15,7 +15,7 @@
 //   catppuccin-mocha
 // ---------------------------------------------------------------------------
 const UTTERANCES_REPO = 'Ferretosan/web-blog-comments';
-const UTTERANCES_THEME = 'photon-dark';
+const UTTERANCES_THEME = 'preferred-color-scheme';
 
 // Inject (or replace) the Utterances widget inside targetEl.
 // postId is used as the issue title so each post gets its own stable thread.
@@ -137,7 +137,10 @@ async function loadBlogPost(filename) {
     }
     
     const markdown = await response.text();
-    const html = parseMarkdown(markdown);
+    let html = parseMarkdown(markdown);
+
+    // Remove trailing horizontal rule to avoid extra line before comments
+    html = html.replace(/<hr>\s*$/i, '');
     
     // Display in popup
     popupwindowstart(html);

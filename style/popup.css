@@ -81,14 +81,16 @@ html.popup-open {
 
 /* Match close icon look to back-to-top button */
 #popup-close img {
-  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%) hue-rotate(293deg) brightness(104%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%)
+    hue-rotate(293deg) brightness(104%) contrast(90%);
   transition: filter 0.2s ease;
   pointer-events: none;
   display: block;
 }
 
 #popup-close:hover img {
-  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%)
+    hue-rotate(19deg) brightness(104%) contrast(90%);
 }
 
 /* Blog post styling inside popup */
@@ -98,7 +100,7 @@ html.popup-open {
   font-size: 2.2em;
   margin-bottom: 10px;
   font-weight: bold;
-  font-family: 'Basiic', monospace;
+  font-family: "Basiic", monospace;
 }
 
 #popup-content h2 {
@@ -110,7 +112,7 @@ html.popup-open {
   border-radius: 0px;
   background: #1e1b3d;
   padding-left: 10px;
-  font-family: 'Basiic', monospace;
+  font-family: "Basiic", monospace;
   text-shadow: 1px 1px 0px #4c1d95;
 }
 
@@ -118,12 +120,12 @@ html.popup-open {
   color: #e879f9;
   margin-top: 25px;
   margin-bottom: 10px;
-  font-family: 'Basiic', monospace;
+  font-family: "Basiic", monospace;
   text-shadow: 1px 1px 0px #1e1b3d;
 }
 
 #popup-content p {
-  font-family: 'SS4', monospace;
+  font-family: "SS4", monospace;
   text-shadow: 1px 1px 0px #1e1b3d;
   line-height: 1.6;
   margin-bottom: 15px;
@@ -147,7 +149,7 @@ html.popup-open {
   color: #f0abfc;
   padding: 2px 6px;
   border-radius: 0;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   border: 1px solid #4c1d95;
 }
 
@@ -158,7 +160,7 @@ html.popup-open {
   border: 2px solid #4c1d95;
   border-radius: 0;
   overflow-x: auto;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   max-width: 100%;
   box-sizing: border-box;
   white-space: pre-wrap;
@@ -187,7 +189,7 @@ html.popup-open {
   border: 2px solid #6d28d9;
   border-radius: 0;
   font-size: 1.5rem;
-  font-family: 'Basiic', monospace;
+  font-family: "Basiic", monospace;
   cursor: pointer;
   display: none;
   z-index: 1000;
@@ -207,29 +209,64 @@ html.popup-open {
 }
 
 #back-to-top img {
-  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%) hue-rotate(293deg) brightness(104%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%)
+    hue-rotate(293deg) brightness(104%) contrast(90%);
   transition: filter 0.2s ease;
   pointer-events: none;
   display: block;
 }
 
 #back-to-top:hover img {
-  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%)
+    hue-rotate(19deg) brightness(104%) contrast(90%);
 }
 #popup-copy-link img {
-  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%) hue-rotate(293deg) brightness(104%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%)
+    hue-rotate(293deg) brightness(104%) contrast(90%);
+}
+
+/* Utterances comments embed styling */
+#utterances-container {
+  margin-top: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#utterances-container h2 {
+  margin: 0 0 12px;
+  color: #c084fc;
+  border-bottom: none;
+  padding: 0;
+  background: transparent;
+  font-family: "Basiic", monospace;
+  text-shadow: 1px 1px 0px #4c1d95;
+}
+
+#utterances-container .utterances {
+  max-width: 100% !important;
+}
+
+#utterances-container .utterances-frame {
+  width: 100% !important;
+  min-width: unset !important;
+  box-sizing: border-box;
   transition: filter 0.2s ease;
   pointer-events: none;
   display: block;
 }
 
 #popup-copy-link:hover img {
-  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%)
+    hue-rotate(19deg) brightness(104%) contrast(90%);
 }
 
 /* Flash copied state: same as hover color */
 #popup-copy-link.copied img {
-  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%)
+    hue-rotate(19deg) brightness(104%) contrast(90%);
 }
 
 #back-to-top.show {
@@ -248,7 +285,7 @@ html.popup-open {
   border: 2px solid #6d28d9;
   border-radius: 0;
   font-size: 1.2rem;
-  font-family: 'Basiic', monospace;
+  font-family: "Basiic", monospace;
   cursor: pointer;
   display: none;
   z-index: 10002;
@@ -268,14 +305,16 @@ html.popup-open {
 }
 
 #popup-back-to-top img {
-  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%) hue-rotate(293deg) brightness(104%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(66%) sepia(92%) saturate(6841%)
+    hue-rotate(293deg) brightness(104%) contrast(90%);
   transition: filter 0.2s ease;
   pointer-events: none;
   display: block;
 }
 
 #popup-back-to-top:hover img {
-  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%) hue-rotate(19deg) brightness(104%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(89%) sepia(58%) saturate(6841%)
+    hue-rotate(19deg) brightness(104%) contrast(90%);
 }
 
 #popup-back-to-top.show {
@@ -294,7 +333,7 @@ html.popup-open {
   border: 2px solid #6d28d9;
   border-radius: 0;
   font-size: 0.95rem;
-  font-family: 'Basiic', monospace;
+  font-family: "Basiic", monospace;
   cursor: pointer;
   display: none;
   z-index: 10002;
@@ -324,9 +363,9 @@ html.popup-open {
 
 /* Utterances comments embed */
 #utterances-container {
-  margin-top: 40px;
-  border-top: 3px solid #6d28d9;
-  padding-top: 10px;
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
 }
 
 #utterances-container .utterances {
@@ -373,7 +412,9 @@ html.popup-open {
   box-shadow: 8px 8px 0px #1e1b3d;
   background: #2d1b40;
   image-rendering: auto;
-  transition: box-shadow 0.2s, border-color 0.2s;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s;
 }
 
 #popup-overlay.image-mode #popup-content img:hover {
