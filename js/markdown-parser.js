@@ -117,7 +117,8 @@ const blogHashToFile = {
   '#blog-font': 'font.md',
   '#blog-aseprite': 'aesprite.md',
   '#blog-chromebooks': 'chromebooks.md',
-  '#blog-mcjob': 'mcjob.md'
+  '#blog-mcjob': 'mcjob.md',
+  '#blog-utterances': 'utterances.md'
 };
 
 const blogFileToHash = {
@@ -125,7 +126,8 @@ const blogFileToHash = {
   'font.md': '#blog-font',
   'aesprite.md': '#blog-aseprite',
   'chromebooks.md': '#blog-chromebooks',
-  'mcjob.md': '#blog-mcjob'
+  'mcjob.md': '#blog-mcjob',
+  'utterances.md': '#blog-utterances'
 };
 
 // Function to load and display blog post
