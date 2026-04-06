@@ -124,6 +124,25 @@ a:hover {
   border-radius: 0px;
 }
 
+/* General clickable hovers across the site */
+a,
+button,
+input[type="button"],
+input[type="submit"],
+.clickable {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+a:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.clickable:hover {
+  transform: translateY(-1px);
+}
+
 .album-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -141,11 +160,12 @@ a:hover {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+  transform-origin: center center;
 }
 
 .album-grid img:hover {
   border-color: #fbbf24;
-  transform: translate(-2px, -2px);
+  transform: translate(-2px, -2px) rotate(-1.5deg);
   box-shadow: 6px 6px 0px #1e1b3d;
 }
 
@@ -165,11 +185,12 @@ a:hover {
   transition: all 0.2s ease;
   box-shadow: 4px 4px 0px #1e1b3d;
   image-rendering: auto;
+  transform-origin: center center;
 }
 
 .photo-grid img:hover {
   border-color: #c084fc;
-  transform: translate(-2px, -2px);
+  transform: translate(-2px, -2px) rotate(2.5deg);
   box-shadow: 6px 6px 0px #1e1b3d;
 }
 
