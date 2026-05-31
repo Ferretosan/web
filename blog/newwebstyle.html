@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why I changed my website style - The Ferretosan Blog</title>
+    <link rel="stylesheet" href="../style/blogPost.css" />
+    <link rel="icon" href="../img/blog.png" />
+  </head>
+  <body>
+    <main class="postPage">
+      <div class="postHeadingRow">
+        <div class="postWordmark">
+          <span class="wordmarkSS4"
+            ><i><b>The</b></i></span
+          ><span class="wordmarkTicketing">Ferretosan</span
+          ><span class="wordmarkSS4"
+            ><i><b>Blog</b></i></span
+          >
+        </div>
+        <div class="postMeta">
+          <span class="postDate">27/05/2026</span>
+          <span class="postTitle">Why I changed my website style</span>
+        </div>
+      </div>
+      <a class="backLink" href="../blog.html">← Back to blog</a>
+      <article>
+        <p>If you're looking at my website right now, you'd probably either be wondering why my main page looks ... familiar or why my log page looks ... modern? classic? Well, we'll find out.</p>
+
+        <h1>The First Flaw</h1>
+
+        <p>I've always wanted to be able to be a source for information, offering opinion on the front page of Google. But, by loading the blog posts as simple overlays with JavaScript, that was simply not possible.</p>
+
+        <p>This also meant I couldn't use fancy comments, easily. You may have read my previous post, where I <a href="utterances.html">set up comments via Utterances</a>, and at the end I said, "I might switch to Guscus, but that seems hard". Well, I can now switch! Because each post is going to have its own individual URL, and won't be loaded via JavaScript, it means all of the blog problems are basically fixed.</p>
+
+        <h1>But why a complete redesign?</h1>
+
+        <p>Well, I'm going to be 100% honest. My old layout was vibe-coded, like not completely, but that was a big part of the development process. This meant I had no ability to make major (or minor tbh) updates easily. I relied on AI to make my website function.</p>
+
+        <p>This wasn't the only reason, however. I've been getting tired of how generic it was looking, and how annoying it was to scroll down to everything. I didn't actually intend for a Windows Xp style, even. I actually just wanted some icons on the left for my main three things, and to have a bar at the bottom for my side-projects. (Yea, I renamed it from "The Hub")</p>
+
+        <p>Quickly I realised how similar this style looked to Windows XP, so I went all-in. At the time of writing this post, I still haven't even finished the main page (or started the blog at all). My ideas are simply too unfathomable.</p>
+
+        <h1>Why a different style for the blog?</h1>
+
+        <p>Well, remembed what I said earlier this post (I hope you do, otherwise you have zero attention span)? "I want my opinion on the front page of Google" or some crap. But I didn't only want to have my blogposts nicely organised on Gooogle, I wanted to have a beautiful, neat collection of all my blog posts.</p>
+
+        <p>On the day of writing this post, I've actually came up with the design for the wordmark, which you can probably see somewhere on the screen. Basically, the point is that I want my blog posts to be on a beautiful, readable website experience.</p>
+
+        <h1>The art and music websites</h1>
+
+        <p>You probably are wondering about my art (digital art, photos and pixel art) and music pages. How would I organise those. The answer is simple. I would just experiment. As of writing this post, I have tons of creative ideas running through my veins. My idea for the music page is kinda simple, just having the Bandcamp emebeds stacked in a collumn.</p>
+
+        <p>My idea for the art page is actually kinda cool. I plan to have the images floating around in the background, with the sections of art in nice bento grid, with the sections on a sidebar on the left.</p>
+
+        <h1>Conclusion</h1>
+
+        <p>Anyways, thanks for listening to/reading my yap.</p>
+
+        <p>じゃね!<br />(Cya!)</p>
+      </article>
+
+      <section class="comments">
+        <h2>Comments</h2>
+        <div id="utterances-container"></div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        const originalTitle = document.title;
+        document.title = "blog/newwebstyle.md";
+
+        const utterances = document.createElement("script");
+        utterances.src = "https://utteranc.es/client.js";
+        utterances.async = true;
+        utterances.crossOrigin = "anonymous";
+        utterances.setAttribute("repo", "Ferretosan/web-blog-comments");
+        utterances.setAttribute("issue-term", "title");
+        utterances.setAttribute("theme", "preferred-color-scheme");
+        utterances.setAttribute("label", "blog-comment");
+        utterances.addEventListener("load", function () {
+          document.title = originalTitle;
+        });
+        utterances.addEventListener("error", function () {
+          document.title = originalTitle;
+        });
+
+        document.getElementById("utterances-container").appendChild(utterances);
+      })();
+    </script>
+  </body>
+</html>

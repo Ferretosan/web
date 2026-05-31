@@ -1,0 +1,193 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Ticketing";
+  src: url(/fonts/basiic.ttf);
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "ss4";
+  src: url(/fonts/ss4.ttf);
+}
+
+@font-face {
+  font-family: "JetBrains";
+  src: url(/fonts/JetBrainsMono[wght].ttf);
+}
+
+body {
+  margin: 0;
+  background-color: #1c141e;
+  color: white;
+  font-family: "ss4";
+}
+
+.postPage {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.postHeadingRow {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.postMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.postDate {
+  font-family: "ss4";
+  font-size: 1rem;
+  line-height: 1;
+  color: #b35aca;
+}
+
+.postWordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.wordmarkSS4 {
+  font-family: "ss4";
+  color: white;
+}
+
+.wordmarkTicketing {
+  font-family: "Ticketing";
+  color: #b35aca;
+  margin-left: 5px;
+}
+
+.postTitle {
+  font-family: "ss4";
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #f8a8ff;
+}
+
+.blogPostDate {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "ss4";
+  font-size: 0.95rem;
+  color: #b35aca;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #f8a8ff;
+  text-decoration: none;
+  transition:
+    transform 200ms ease,
+    text-decoration-color 200ms ease;
+  transform-origin: left center;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+  transform: scale(0.9);
+}
+
+article p {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  margin: 0 0 1rem;
+}
+
+article h1,
+article h2,
+article h3,
+.comments h2 {
+  font-family: "ss4";
+  line-height: 1;
+  margin: 2rem 0 1rem;
+  color: #f0d8ff;
+}
+
+article h1 {
+  font-size: 2.4rem;
+  background-color: #3a2441;
+  padding: 5px 25px 5px 25px;
+  border-radius: 5px;
+}
+
+article h1::before {
+  content: "#";
+  color: #b35aca;
+}
+
+article h2,
+.comments h2 {
+  font-size: 1.9rem;
+  background-color: #3a2441;
+  padding: 5px 25px 5px 25px;
+  border-radius: 5px;
+}
+
+article h2::before,
+.comments h2::before {
+  content: "##";
+  color: #b35aca;
+}
+
+article h3 {
+  font-size: 1.5rem;
+  background-color: #3a2441;
+  padding: 5px 25px 5px 25px;
+  border-radius: 5px;
+}
+
+article h3::before {
+  content: "###";
+  color: #b35aca;
+}
+
+article hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 2.5rem 0;
+}
+
+article a,
+.comments a {
+  color: #f8a8ff;
+  display: inline-block;
+  text-decoration: none;
+  transition:
+    transform 200ms ease,
+    text-decoration-color 200ms ease;
+  transform-origin: left center;
+}
+
+article a:hover,
+.comments a:hover {
+  color: #f8a8ff;
+  text-decoration: underline;
+  transform: scale(0.9);
+}
+
+.comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#utterances-container {
+  min-height: 80px;
+}

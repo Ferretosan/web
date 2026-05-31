@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Comments Using Utterances! - The Ferretosan Blog</title>
+    <link rel="stylesheet" href="../style/blogPost.css" />
+    <link rel="icon" href="../img/blog.png" />
+  </head>
+  <body>
+    <main class="postPage">
+      <div class="postHeadingRow">
+        <div class="postWordmark">
+          <span class="wordmarkSS4"
+            ><i><b>The</b></i></span
+          ><span class="wordmarkTicketing">Ferretosan</span
+          ><span class="wordmarkSS4"
+            ><i><b>Blog</b></i></span
+          >
+        </div>
+        <div class="postMeta">
+          <span class="postDate">21/03/2026</span>
+          <span class="postTitle">Blog Comments Using Utterances!</span>
+        </div>
+      </div>
+      <a class="backLink" href="../blog.html">← Back to blog</a>
+      <article>
+        <p>Hello ladies and gentlemen, pet rocks and tungsten cubes.</p>
+
+        <h1>Introduction</h1>
+        <p>Today I have accomplished something (with the help of a lil AI...) revolutionary. My blog posts have comments. But how could I accomplish such a thing in the age of corporate garbage infecting the popular solutions like Disqus? Well, with the help of Utterances.</p>
+
+        <h1>But what is Utterances?</h1>
+        <p>Utterances is a comment system built upon GitHub issues. This means that you can keep your comments with your repository (or in a seperate repository). This also means that you don't have to run any server code, and you're not giving some random company all your data (except for GitHub but my site is already on GitHub so I don't really care).</p>
+
+        <h1>The only problem(s)</h1>
+        <p>However, Utterances isn't perfect (as is nothing) and it has a couple problems. Namely of which is that you cannot reply to comments, which is quite irritating, but you can just @mention people so it's "fine".</p>
+        <p>The more big problem is that it doesn't support (easy) custom styling right of the box. And this is because, and I quote DuckDuckGo Search assist, "due to same-origin policy restrictions". Whatever the hell that means... So, I can't have cool matching styling...</p>
+        <p>I might switch to Giscus, but that seems hard 😔</p>
+
+        <h1>Changing the way this blog works a lil</h1>
+        <p>Currently, I make these big issues where theres a bunch of different things all in one. I'm changing that and instead I will focus on one subject that's actually helpful to people.</p>
+
+        <hr />
+        <p>Check out Utterances at: <a href="https://utteranc.es">utteranc.es</a></p>
+      </article>
+
+      <section class="comments">
+        <h2>Comments</h2>
+        <div id="utterances-container"></div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        const originalTitle = document.title;
+        document.title = "blog/utterances.md";
+
+        const utterances = document.createElement("script");
+        utterances.src = "https://utteranc.es/client.js";
+        utterances.async = true;
+        utterances.crossOrigin = "anonymous";
+        utterances.setAttribute("repo", "Ferretosan/web-blog-comments");
+        utterances.setAttribute("issue-term", "title");
+        utterances.setAttribute("theme", "preferred-color-scheme");
+        utterances.setAttribute("label", "blog-comment");
+        utterances.addEventListener("load", function () {
+          document.title = originalTitle;
+        });
+        utterances.addEventListener("error", function () {
+          document.title = originalTitle;
+        });
+
+        document.getElementById("utterances-container").appendChild(utterances);
+      })();
+    </script>
+  </body>
+</html>

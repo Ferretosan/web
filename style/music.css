@@ -1,0 +1,101 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Ticketing";
+  src: url(/fonts/basiic.ttf);
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "ss4";
+  src: url(/fonts/ss4.ttf);
+}
+
+@font-face {
+  font-family: "JetBrains";
+  src: url(/fonts/JetBrainsMono[wght].ttf);
+}
+
+body {
+  text-align: center;
+  font-family: "Rubik";
+  margin: 0;
+  background-color: #1c141e;
+  color: white;
+}
+
+h1 {
+  font-family: "Ticketing";
+  font-size: 70px;
+}
+
+h3 {
+  font-family: "Ticketing";
+  font-size: 35px;
+}
+
+.newSingle {
+  background-color: #011400;
+  color: #139809;
+  padding: 16px;
+  margin: 32px auto;
+  max-width: 700px;
+  border: 2px solid #ffffff;
+}
+
+.newSingle h3 {
+  margin: 0 0 16px;
+}
+
+.musicServices {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px auto 0;
+}
+
+.musicServices .headingButton.small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  transition: transform 400ms ease;
+}
+
+.musicServices .headingButton.small:hover,
+.musicServices .headingButton.small:focus-visible {
+  background: linear-gradient(115deg, var(--hover-color-1, var(--hover-color)) 0 50%, var(--hover-color-2, var(--hover-color)) 50% 100%);
+  transform: scale(1.2);
+  transition: transform 200ms ease;
+}
+
+.musicServices .headingButton.small img {
+  display: block;
+  height: 24px;
+  width: auto;
+}
+
+.backToFerretsCorner a {
+  display: inline-block;
+  color: rgb(255, 118, 241);
+  text-decoration: none;
+  transition: transform 400ms ease;
+  transform-origin: center;
+}
+
+.backToFerretsCorner a:hover {
+  text-decoration: underline;
+  transform: scale(1.2);
+  transition: transform 200ms ease;
+  transform-origin: center;
+}

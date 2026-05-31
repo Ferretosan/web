@@ -1,0 +1,139 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Ticketing";
+  src: url(/fonts/basiic.ttf);
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "ss4";
+  src: url(/fonts/ss4.ttf);
+}
+
+@font-face {
+  font-family: "JetBrains";
+  src: url(/fonts/JetBrainsMono[wght].ttf);
+}
+
+body {
+  background-color: #1c141e;
+  color: white;
+  font-family: "ss4";
+  margin: 0;
+}
+
+.blogLayout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 40px 50px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  font-size: 100px;
+  max-width: fit-content;
+  margin: 0;
+}
+
+.headingSS4 {
+  font-family: "ss4";
+}
+
+.headingTicketing {
+  font-family: "Ticketing";
+  margin-left: 10px;
+  color: #b35aca;
+}
+
+.subheading {
+  font-size: 24px;
+  margin: 30px 0px -30px 0px;
+}
+
+.subheading a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  transition:
+    transform 200ms ease,
+    text-decoration-color 200ms ease;
+  transform-origin: left center;
+}
+
+.subheading a:hover {
+  text-decoration: underline;
+  transform: scale(0.9);
+}
+
+.blogPostCard {
+  font-family: "ss4";
+  background-color: #3a2441;
+  padding: 5px 25px 5px 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.blogPostDate {
+  display: block;
+  margin-top: 8px;
+  font-family: "ss4";
+  font-size: 0.95rem;
+  color: #b35aca;
+}
+
+.blogPostCard h3,
+h4 {
+  font-family: "ss4";
+}
+
+.blogPostCard a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  transition:
+    transform 200ms ease,
+    text-decoration-color 200ms ease;
+  transform-origin: left center;
+}
+
+.blogPostCard a:hover {
+  text-decoration: underline;
+  transform: scale(0.9);
+}
+
+.blogPosts {
+  flex: 1;
+  max-width: 700px;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 30px 20px;
+  }
+
+  .blogLayout {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .heading {
+    margin: 0;
+  }
+
+  .blogPosts {
+    max-width: none;
+    padding-top: 0;
+  }
+
+  .blogPostCard {
+    margin-top: 0;
+  }
+}

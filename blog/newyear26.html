@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy new years! - The Ferretosan Blog</title>
+    <link rel="stylesheet" href="../style/blogPost.css" />
+    <link rel="icon" href="../img/blog.png" />
+  </head>
+  <body>
+    <main class="postPage">
+      <div class="postHeadingRow">
+        <div class="postWordmark">
+          <span class="wordmarkSS4"
+            ><i><b>The</b></i></span
+          ><span class="wordmarkTicketing">Ferretosan</span
+          ><span class="wordmarkSS4"
+            ><i><b>Blog</b></i></span
+          >
+        </div>
+        <div class="postMeta">
+          <span class="postDate">03/01/2026</span>
+          <span class="postTitle">Happy new years!</span>
+        </div>
+      </div>
+      <a class="backLink" href="../blog.html">← Back to blog</a>
+      <article>
+        <p>こんにちは！ (Hello!)</p>
+
+        <h1>Happy new years!</h1>
+        <p>Yup, it's the new year once again! The cycle shall continue. I hope everyone reading has had a great Christmas (I actually took the ornaments off the tree just then) and has set (achievable) goals for the 2027th year since AD 0.</p>
+
+        <h1>Comments coming soon</h1>
+        <p>I'm finally adding comments to my blog post. I don't exactly when these comments will come out (I'm <em>still</em> sorting out the server stuff, as I have been for the past forever), but I assure you they will come at some point. Unless the Earth ends. Or I die. Or Bitwarden goes oof. That would suck.</p>
+
+        <h1>I don't know what else to put here</h1>
+        <p>Cuz idk what major things are happening, heres some minor things. I have another new subservice, 2factor - a TOTP generator (in beta). And while adding it today I forgot to change the version number, sorry guys! More words to this thing to fill up space.</p>
+
+        <p>じゃあね<br />(Bye!)</p>
+      </article>
+
+      <section class="comments">
+        <h2>Comments</h2>
+        <div id="utterances-container"></div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        const originalTitle = document.title;
+        document.title = "blog/newyear26.md";
+
+        const utterances = document.createElement("script");
+        utterances.src = "https://utteranc.es/client.js";
+        utterances.async = true;
+        utterances.crossOrigin = "anonymous";
+        utterances.setAttribute("repo", "Ferretosan/web-blog-comments");
+        utterances.setAttribute("issue-term", "title");
+        utterances.setAttribute("theme", "preferred-color-scheme");
+        utterances.setAttribute("label", "blog-comment");
+        utterances.addEventListener("load", function () {
+          document.title = originalTitle;
+        });
+        utterances.addEventListener("error", function () {
+          document.title = originalTitle;
+        });
+
+        document.getElementById("utterances-container").appendChild(utterances);
+      })();
+    </script>
+  </body>
+</html>

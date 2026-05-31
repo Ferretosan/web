@@ -1,0 +1,113 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Ticketing";
+  src: url(/fonts/basiic.ttf);
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "ss4";
+  src: url(/fonts/ss4.ttf);
+}
+
+@font-face {
+  font-family: "JetBrains";
+  src: url(/fonts/JetBrainsMono[wght].ttf);
+}
+
+body {
+  font-family: "SS4";
+  background-color: #26002d;
+  margin: 0;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.heading {
+  font-size: 100px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero a {
+  color: #e1a0ed;
+  text-decoration: none;
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 100ms ease;
+}
+
+.hero a:hover {
+  text-decoration: underline;
+  transform: scale(0.9);
+  transition: transform 100ms ease;
+}
+
+.headingTicketing {
+  font-family: "Ticketing";
+}
+
+.headingSS4 {
+  font-family: "SS4";
+}
+
+.grid {
+  --masonry-min-col: 260px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.masonry-column {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.photo-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 0, 14, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.photo-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.photo-overlay img {
+  max-width: min(90vw, 1200px);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 30px;
+}

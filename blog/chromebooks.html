@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOD I HATE CHROMEBOOKS - The Ferretosan Blog</title>
+    <link rel="stylesheet" href="../style/blogPost.css" />
+    <link rel="icon" href="../img/blog.png" />
+  </head>
+  <body>
+    <main class="postPage">
+      <div class="postHeadingRow">
+        <div class="postWordmark">
+          <span class="wordmarkSS4"
+            ><i><b>The</b></i></span
+          ><span class="wordmarkTicketing">Ferretosan</span
+          ><span class="wordmarkSS4"
+            ><i><b>Blog</b></i></span
+          >
+        </div>
+        <div class="postMeta">
+          <span class="postDate">14/06/2025</span>
+          <span class="postTitle">GOD I HATE CHROMEBOOKS</span>
+        </div>
+      </div>
+      <a class="backLink" href="../blog.html">← Back to blog</a>
+      <article>
+        <h1>Introduction</h1>
+        <p>I hate Chromebooks. I mean, they're supposedly the fastest computer that can run chrome - yet fail to reasonably handle 2 tabs. (Google Docs, mind you) Never had a virus, marketing garbage - my friend proplayer919 made one in seconds.</p>
+        <p>Today I'm going to cover why I absolutely hate Chromebooks, and what could redeem them.</p>
+
+        <h1>Why I hate them</h1>
+        <p>Chromebooks may seem like some amazing things that will let you browse the web with ease. Let me tell you a funny story.</p>
+        <p>I had to do a science project and I needed to have an encyvlopedia and Google Docs open. I opened my Google Docs thing, and it was already starting to lag with nothing else open. I opened the encyclopedia, and ... nothing happened when I moved the mouse. I managed to actively crash a Chromebook with 2 tabs.</p>
+
+        <h2>Lightning round</h2>
+        <p>Number 1. There's good Chromebooks ... that are garbage. Even the so-called good chromebooks with like 8gb ram and a decent processor fail to run YouTube and Google Docs. A good analogy ChatGPT gave me is that's a digital whack-a-mole. To be honest, very true.</p>
+        <p>Number 2. Everything is web-based, and nothing runs. I can't open anything if I don't have internet, and if I do I can't open even the most basic of apps because it's not designed in pure HTML/CSS/JS.</p>
+        <p>Number 3. They're not even good to use at this point. They used to have a niche - being okay for some basic web browing and then you got out your actual computer for anything else. But, with more schools adopting them for literally everything, you can't do lots of work. Just, staight up.</p>
+        <p>Now, they do have a purpose.</p>
+        <p>Because they're only web-based, you can really lock them down. If you have a test ... on Google Forms for some reason ... you can make it so you can't open any tabs or anything like that. But, then most tests are with Janison Replay (at least from my Australian experience) and you just loig out and click Janison and it's more locked down fully.</p>
+
+        <h1>They tried to redeem themselves...</h1>
+        <p>...and failed.</p>
+        <p>"Just install Linux!" you say. Uhm, first off, most school chromebooks are so locked down you can't even install an adblocker. Secondly, it's not instantly going to turn your Chromebook into a dev machine. You need good hardware and other things. Plus, you can only install a linux enviroment, not linux itself on Chromebooks. You need to jailbreak your Chromebook to use a OS that isn't ChromeOS.</p>
+        <p>You can run games. If they're OG Temple Run - even in that case they will probably run at about 10 frames. You can't run Steam. You can't run Minecraft Java ... or Bedrock tbh. You can run Cloud Gaming, with input lag. But, even games that do run have input lag.</p>
+        <p>"Offline". They are offline for as long as I can drink tea. That's 2 minutes by the way. I dare you to attemp to edit a Google Doc while on a train or a plane without internet. Google Docs will crash, and then ask you to go online. Maybe you spent too long on an offline doc? Yeah, no. Using a Chromebook offline is as reliable as giving a child your bank account. They will spend all your money buying ice-cream. For Chromebooks, they spend your time saying it's offline only to crash and for you to lose all your work.</p>
+
+        <h1>What redeems them</h1>
+        <p>Chromebooks are good controled enviroments. Lockdown for tests, as a kiosk, or using them in libraries where to bo honest nobody is productive anyways. For anything else, you're better of with even a Raspberry Pi.</p>
+
+        <h1>In conclusion...</h1>
+        <p>...they work. Barely. Another good think that ChatGPT said is that Chromebooks are what happens when you make a laptop out of anxiety and glue. I like that. I bet a Chromebook would explode if you had over 10 tabs open. If you want to do anything else that isn't just clicking around on websites. Get a real computer. Even a beat-up ThinkPad will give you a better time.</p>
+        <p><strong>TL;DR</strong></p>
+        <p>Don't use a Chromebook.</p>
+      </article>
+
+      <section class="comments">
+        <h2>Comments</h2>
+        <div id="utterances-container"></div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        const originalTitle = document.title;
+        document.title = "blog/chromebooks.md";
+
+        const utterances = document.createElement("script");
+        utterances.src = "https://utteranc.es/client.js";
+        utterances.async = true;
+        utterances.crossOrigin = "anonymous";
+        utterances.setAttribute("repo", "Ferretosan/web-blog-comments");
+        utterances.setAttribute("issue-term", "title");
+        utterances.setAttribute("theme", "preferred-color-scheme");
+        utterances.setAttribute("label", "blog-comment");
+        utterances.addEventListener("load", function () {
+          document.title = originalTitle;
+        });
+        utterances.addEventListener("error", function () {
+          document.title = originalTitle;
+        });
+
+        document.getElementById("utterances-container").appendChild(utterances);
+      })();
+    </script>
+  </body>
+</html>

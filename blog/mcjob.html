@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Debate - Java or Bedrock - The Ferretosan Blog</title>
+    <link rel="stylesheet" href="../style/blogPost.css" />
+    <link rel="icon" href="../img/blog.png" />
+  </head>
+  <body>
+    <main class="postPage">
+      <div class="postHeadingRow">
+        <div class="postWordmark">
+          <span class="wordmarkSS4"
+            ><i><b>The</b></i></span
+          ><span class="wordmarkTicketing">Ferretosan</span
+          ><span class="wordmarkSS4"
+            ><i><b>Blog</b></i></span
+          >
+        </div>
+        <div class="postMeta">
+          <span class="postDate">16/10/2024</span>
+          <span class="postTitle">The Debate - Java or Bedrock</span>
+        </div>
+      </div>
+      <a class="backLink" href="../blog.html">← Back to blog</a>
+      <article>
+        <h1>Introduction</h1>
+        <p>So, do you choose Minecraft Java Edition or Minecraft Bedrock Edition? Well, there are reasons for both, and I'll cover why you might choose one or another. But, this might be a little bit biasted because I am a massive Java player on Prism.</p>
+
+        <h1>Bedrock Edition</h1>
+        <p>It's no secret that Microsoft is trying to make Bedrock the main version of Minecraft, and for a big reason. Bedrock is being pushed forward because it is on almost any device and operating system, except for Linux and Mac. Another reason is that Bedrock is more profitable - look at the marketplace! A texture pack for 30 dollars!? Why do I have to pay? Yes, you can manually find some on some very strange websites, but just why?</p>
+        <p>But if you are just planning to play a world by yourself or with a maximum of 7 other people then Bedrock's world hosting does that, almost no hassle. If you want to play with more people, then there are servers that support Bedrock - and sometimes even Java. There also is Realms - which costs money. The thing I don't like is that you have to download an app for your phone just so you can play on servers on console. Like, if some random guy on the App Store can allow for servers, why can't Microsoft? Well, they want money, they want Realms.</p>
+        <p>And then, if you want to truly customize your experience with mods, then you have to pay. You pay for the game - then pay for DLC. It is how most modern games work and I hate it. You pay for a game and you have to pay more to be able to enjoy it. Like, don't you pay for a game to play it?</p>
+        <p>What if you want to play an older version? You can't. So, you now pay for a game to not be able to enjoy it, and can't play older versions for some old memories, I think that Microsoft is torturing their very fragile playerbase. Well, you can - but do you really want to visit some really sketchy sites? Oh, you don't? Too bad, so sad.</p>
+
+        <h1>Java Edition</h1>
+        <p>Java Editon was the first version of Minecraft, so it but be better - and it is. Very, very better. But, every good thing has problems. Let's start with optimization. Java Editon runs on outdated OpenGL technology, so it is bound to be slow as OpenGL was originally made for Windows 98, so from 1998 - that's a long time ago! Even on decent hardware, you can be expecting around 60 frames per second on deafult settings. That's not very good. But, with some amazing mods, you can be expecting around 300 frames - much better!</p>
+        <p>If you want to have mods, you can! If you want to have your own custom skin, you can! If you want it, you probably can get it. This is because Java is much more open to modding, and the devoted fans love adding new features - I even play with 53 mods installed! In fact, people can make almost anything for Minecraft Java because it is so open.</p>
+        <p>What I haven't touched is how hard getting these mods and other things are to get. The easiest way to get them is to use a launcher, and I personally recommend Prism because of how lightweight it is. Because it is open source and gets all of its profits from donations, it means that they don't have their own Java installation. This means that you have to download another launcher to get a working Java directory to be able to reach the end goal of installing Prism. But once you have Prism, installnig mods and modpacks is a breeze. The other way to do it is very, very hard. Firstly you have to download the mod, and then search for your .minecraft folder, install fabric, install this, install that, it gets really tedious.</p>
+        <p>But, Java Editon has more servers to play, and more options for almost erverything, even without mods. There can be modded servers that run on vanilla Minecraft. That is crazy! As soon as I tried Hypixel and BendersMC, I instantly fell in love with Java. But, these servers are harder to set up than Bedrock.</p>
+
+        <h1>TL;DR</h1>
+        <p>If you want a quick experience to play with friends, then Bedrock is probably the safest option. Though if you want a more fun and enjoyable experience, then Java is definitely the best option - in fact I think that Java is the best for everyone, with a nice modpack.</p>
+      </article>
+
+      <section class="comments">
+        <h2>Comments</h2>
+        <div id="utterances-container"></div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        const originalTitle = document.title;
+        document.title = "blog/mcjob.md";
+
+        const utterances = document.createElement("script");
+        utterances.src = "https://utteranc.es/client.js";
+        utterances.async = true;
+        utterances.crossOrigin = "anonymous";
+        utterances.setAttribute("repo", "Ferretosan/web-blog-comments");
+        utterances.setAttribute("issue-term", "title");
+        utterances.setAttribute("theme", "preferred-color-scheme");
+        utterances.setAttribute("label", "blog-comment");
+        utterances.addEventListener("load", function () {
+          document.title = originalTitle;
+        });
+        utterances.addEventListener("error", function () {
+          document.title = originalTitle;
+        });
+
+        document.getElementById("utterances-container").appendChild(utterances);
+      })();
+    </script>
+  </body>
+</html>

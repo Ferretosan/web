@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why I changed my font - The Ferretosan Blog</title>
+    <link rel="stylesheet" href="../style/blogPost.css" />
+    <link rel="icon" href="../img/blog.png" />
+  </head>
+  <body>
+    <main class="postPage">
+      <div class="postHeadingRow">
+        <div class="postWordmark">
+          <span class="wordmarkSS4"
+            ><i><b>The</b></i></span
+          ><span class="wordmarkTicketing">Ferretosan</span
+          ><span class="wordmarkSS4"
+            ><i><b>Blog</b></i></span
+          >
+        </div>
+        <div class="postMeta">
+          <span class="postDate">20/12/2025</span>
+          <span class="postTitle">Why I changed my font</span>
+        </div>
+      </div>
+      <a class="backLink" href="../blog.html">← Back to blog</a>
+      <article>
+        <h1>Why I changed my font</h1>
+        <p>こんにちは！ (Hello!)</p>
+
+        <h1>The new fonts (AAAAAA)</h1>
+        <p>I changed my fonts...</p>
+        <p>If you're thinking, what the hell is this guy talking about? He changed his fonts, WHO THE HELL CARES??!?!? Uh, good point.</p>
+        <p>But, I think this deserves a blog post.</p>
+        <p>For the longest time, I've had the same font for headings <em>and</em> body text, and that didn't bother me. The font was originally Basiic, but that changed to Ticketing (but if you look at the src of this website it still says Basiic :P).</p>
+        <p>But I've been thinking around changing the system for a while now. And, I did it!</p>
+
+        <h2>The new fonts look ... modern - new visual style?</h2>
+        <p>Nope! Hell no way I'm ever changing the pixel-y retro style of my website. It suits me perfectly and I'm <em>never</em> changing the distinct style of my website. While I am planning to add some silly new features, the underlying visual style will stay the same.</p>
+
+        <h2>What are the fonts?</h2>
+        <p>
+          <strong>Heading:</strong> Ticketing (my ol' favourite)<br />
+          <strong>Body:</strong> Rubik (my favourite sans-serif font)<br />
+          <strong>Blog:</strong> Source Serif 4 (it's a good font)
+        </p>
+
+        <h1>DingoWatch got a domain</h1>
+        <p>If you have spent some time looking at my Neocities, you'll find a guy called DingoWatch, Hond, Dingo8888, Dingo - whatever you call him, he's gone through a <em>load</em> of names lol. He's setting it up soon (when he actually FIXES THE BLODDY WHOIS) and I'll tell you more in the next blog post.</p>
+
+        <h1>Exciting new news for this blog!</h1>
+        <p>Quick interjection! I'm going to try updating this blog bi-weekly, so stay tuned for a LOAD of new posts. I'll be adding loads more features (the to-do note is kinda bare) and a lot more!</p>
+
+        <h1>Merry Christmas!</h1>
+        <p>I almost forgot, it's flippin December ALREADY. I just want this part of the blog to say "Merry Christmas". I'll see you all next year!</p>
+
+        <hr />
+        <p>じゃあね！<br />(Bye!)</p>
+      </article>
+
+      <section class="comments">
+        <h2>Comments</h2>
+        <div id="utterances-container"></div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        const originalTitle = document.title;
+        document.title = "blog/font.md";
+
+        const utterances = document.createElement("script");
+        utterances.src = "https://utteranc.es/client.js";
+        utterances.async = true;
+        utterances.crossOrigin = "anonymous";
+        utterances.setAttribute("repo", "Ferretosan/web-blog-comments");
+        utterances.setAttribute("issue-term", "title");
+        utterances.setAttribute("theme", "preferred-color-scheme");
+        utterances.setAttribute("label", "blog-comment");
+        utterances.addEventListener("load", function () {
+          document.title = originalTitle;
+        });
+        utterances.addEventListener("error", function () {
+          document.title = originalTitle;
+        });
+
+        document.getElementById("utterances-container").appendChild(utterances);
+      })();
+    </script>
+  </body>
+</html>

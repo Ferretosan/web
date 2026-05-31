@@ -26,18 +26,25 @@
 /* Main Styling thing idk */
 
 :root {
-  --motion-time: 100ms;
+  --motion-time: 200ms;
+  --hub-height: 56px;
 }
 
 body {
   margin: 0;
-  background-color: #390947;
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=390947&c2=7b0177&gt=r&gd=dbb
+*/
+  background: #390947;
+  background: radial-gradient(at center top, #7b0177, #390947);
+  padding-bottom: var(--hub-height);
 }
 
 .mainItems img {
   width: 100px;
   image-rendering: pixelated;
-  transition: transform var(--motion-time) linear;
+  transition: transform var(--motion-time) ease;
 }
 
 .mainItems img:hover {
@@ -108,6 +115,10 @@ body {
   height: 25px;
 }
 
+.hub .item img {
+  transition: transform var(--motion-time) ease;
+}
+
 .hub {
   position: fixed;
   bottom: 0;
@@ -120,6 +131,7 @@ body {
   background: #ebc7ff;
   background: linear-gradient(180deg, rgba(235, 199, 255, 1) 0%, rgba(89, 38, 108, 1) 15%, rgba(85, 38, 105, 1) 50%, rgba(112, 63, 143, 1) 100%);
   box-sizing: border-box;
+  z-index: 20;
 }
 
 .hub .item {
@@ -141,6 +153,11 @@ body {
   background: linear-gradient(180deg, rgba(235, 199, 255, 1) 0%, rgba(134, 32, 132, 1) 15%, rgba(134, 32, 132, 1) 50%, rgba(97, 20, 96, 1) 100%);
 }
 
+.hub .item:hover img,
+.hub .item:focus-visible img {
+  transform: scale(1.1) rotate(10deg);
+}
+
 .startMenu {
   flex: 0 0 120px;
   display: flex;
@@ -158,6 +175,99 @@ body {
 .startMenu:hover {
   background: #e9bfff;
   background: linear-gradient(180deg, rgba(233, 191, 255, 1) 0%, rgba(122, 5, 185, 1) 15%, rgba(122, 5, 185, 1) 50%, rgba(83, 28, 112, 1) 100%);
+}
+
+.startMenu:hover img,
+.startMenu:focus-visible img {
+  transform: scale(1) rotate(360deg);
+}
+
+.startMenu img {
+  transition: transform 400ms ease;
+}
+
+.startMenuContent {
+  position: fixed;
+  left: 8px;
+  bottom: calc(var(--hub-height) + 8px);
+  width: 400px;
+  padding: 12px;
+  box-sizing: border-box;
+  background: #1a0421;
+  border: 4px solid rgb(160, 43, 158);
+  border-radius: 8px 8px 0 0;
+  color: white;
+  z-index: 21;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(120px);
+  transition:
+    opacity var(--motion-time) ease,
+    transform var(--motion-time) ease,
+    visibility var(--motion-time) ease;
+  pointer-events: none;
+}
+
+.startMenuContent--open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.startMenuContent .startMenuHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.startMenuContent .startMenuHeader img {
+  width: 48px;
+  height: 48px;
+}
+
+.startMenuContent .startMenuHeader h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.startMenuContent .startMenuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: calc(100vh - var(--hub-height) - 120px);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.startMenuContent .startMenuItems h2 {
+  margin: 8px 0 0;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* visible separators inside the start menu */
+.startMenuContent .startMenuItems hr {
+  color: white;
+  border: 1px solid #ECADFF;
+  width: 100%;
+}
+
+.startMenuContent .startMenuItems .section {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.startMenuContent .socials .section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 a {
@@ -234,7 +344,8 @@ a:hover {
   gap: 8px;
 }
 
-.window .primaryWindowHeading .headingButtons .headingButton {
+.window .primaryWindowHeading .headingButtons .headingButton,
+.startMenuContent .socials .headingButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -243,20 +354,33 @@ a:hover {
   height: 24px;
   position: relative;
   border-radius: 5px;
-  transition: background-color var(--motion-time) linear;
+  transition: background-color var(--motion-time) ease;
 }
 
 .window .primaryWindowHeading .headingButtons .headingButton:hover,
-.window .primaryWindowHeading .headingButtons .headingButton:focus-visible {
-  background-color: var(--hover-color);
+.window .primaryWindowHeading .headingButtons .headingButton:focus-visible,
+.startMenuContent .socials .headingButton:hover,
+.startMenuContent .socials .headingButton:focus-visible {
+  background: linear-gradient(115deg, var(--hover-color-1, var(--hover-color)) 0 50%, var(--hover-color-2, var(--hover-color)) 50% 100%);
 }
 
-.window .primaryWindowHeading .headingButtons .headingButton img {
+.window .primaryWindowHeading .headingButtons .headingButton img,
+.startMenuContent .socials .headingButton img {
   display: block;
-  height: 22px;
+  height: 18px;
+  padding: 2px;
+  transition: transform var(--motion-time) ease;
+  transform: scale(1.2);
 }
 
-.window .primaryWindowHeading .headingButtons .headingButton::after {
+.window .primaryWindowHeading .headingButtons .headingButton img:hover,
+.startMenuContent .socials .headingButton img:hover {
+  transition: transform var(--motion-time) ease;
+  transform: scale(1) rotate(-5deg);
+}
+
+.window .primaryWindowHeading .headingButtons .headingButton::after,
+.startMenuContent .socials .headingButton::after {
   content: attr(data-tooltip);
   position: absolute;
   top: calc(100% + 8px);
@@ -273,13 +397,14 @@ a:hover {
   white-space: nowrap;
   opacity: 0;
   transition:
-    opacity var(--motion-time) linear,
-    transform var(--motion-time) linear;
+    opacity var(--motion-time) ease,
+    transform var(--motion-time) ease;
   pointer-events: none;
   z-index: 10;
 }
 
-.window .primaryWindowHeading .headingButtons .headingButton::before {
+.window .primaryWindowHeading .headingButtons .headingButton::before,
+.startMenuContent .socials .headingButton::before {
   content: "";
   position: absolute;
   top: calc(100% + 2px);
@@ -290,8 +415,8 @@ a:hover {
   border-bottom: 5px solid #2b0040;
   opacity: 0;
   transition:
-    opacity var(--motion-time) linear,
-    transform var(--motion-time) linear;
+    opacity var(--motion-time) ease,
+    transform var(--motion-time) ease;
   pointer-events: none;
   z-index: 10;
 }
@@ -299,17 +424,25 @@ a:hover {
 .window .primaryWindowHeading .headingButtons .headingButton:hover::after,
 .window .primaryWindowHeading .headingButtons .headingButton:hover::before,
 .window .primaryWindowHeading .headingButtons .headingButton:focus-visible::after,
-.window .primaryWindowHeading .headingButtons .headingButton:focus-visible::before {
+.window .primaryWindowHeading .headingButtons .headingButton:focus-visible::before,
+.startMenuContent .socials .headingButton:hover::after,
+.startMenuContent .socials .headingButton:hover::before,
+.startMenuContent .socials .headingButton:focus-visible::after,
+.startMenuContent .socials .headingButton:focus-visible::before {
   opacity: 1;
 }
 
 .window .primaryWindowHeading .headingButtons .headingButton:hover::after,
-.window .primaryWindowHeading .headingButtons .headingButton:focus-visible::after {
+.window .primaryWindowHeading .headingButtons .headingButton:focus-visible::after,
+.startMenuContent .socials .headingButton:hover::after,
+.startMenuContent .socials .headingButton:focus-visible::after {
   transform: translateX(-50%) translateY(0) scale(1);
 }
 
 .window .primaryWindowHeading .headingButtons .headingButton:hover::before,
-.window .primaryWindowHeading .headingButtons .headingButton:focus-visible::before {
+.window .primaryWindowHeading .headingButtons .headingButton:focus-visible::before,
+.startMenuContent .socials .headingButton:hover::before,
+.startMenuContent .socials .headingButton:focus-visible::before {
   transform: translateX(-50%) translateY(0);
 }
 
@@ -334,7 +467,6 @@ a:hover {
 }
 
 .about {
-  max-height: calc(100vh - 160px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -342,7 +474,6 @@ a:hover {
 }
 
 .music {
-  max-height: calc(100vh - 160px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -350,7 +481,6 @@ a:hover {
 }
 
 .blog {
-  max-height: calc(100vh - 160px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -400,6 +530,14 @@ code {
   border-radius: 5px;
 }
 
+.blogPostDate {
+  display: block;
+  margin-top: 8px;
+  font-family: "ss4";
+  font-size: 0.95rem;
+  color: #b35aca;
+}
+
 .blogPostCard h3,
 h4 {
   font-family: "ss4";
@@ -407,6 +545,17 @@ h4 {
 
 .blogPostCard a {
   color: white;
+  display: inline-block;
+  text-decoration: none;
+  transition:
+    transform 200ms ease,
+    text-decoration-color 200ms ease;
+  transform-origin: left center;
+}
+
+.blogPostCard a:hover {
+  text-decoration: underline;
+  transform: scale(0.9);
 }
 
 /* HTML: <div class="loader"></div> */
@@ -438,8 +587,8 @@ h4 {
   z-index: 9999;
   opacity: 1;
   transition:
-    opacity var(--motion-time) linear,
-    visibility var(--motion-time) linear;
+    opacity var(--motion-time) ease,
+    visibility var(--motion-time) ease;
 }
 
 .loadingScreen--hidden {
@@ -459,5 +608,78 @@ h4 {
 
 .versionNumber {
   font-family: "Ticketing";
+  color: white;
+}
+
+.startMenuContent .startMenuHeader sup {
+  color: #ecadff;
+}
+
+.startMenuContent .startMenuHeader img {
+  transition: transform 400ms ease;
+}
+
+.startMenuContent .startMenuHeader img:hover {
+  transform: rotate(360deg);
+}
+
+.startMenuContent .startMenuItems .largeStartMenuItem {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-family: "Ticketing";
+  background: #ffc7ff;
+  background: linear-gradient(180deg, rgba(255, 199, 255, 1) 0%, rgba(160, 43, 158, 1) 15%, rgba(162, 48, 158, 1) 50%, rgba(199, 76, 199, 1) 100%);
+  padding: 3px;
+  border-radius: 5px;
+  margin: 5px 0px 0px 0px;
+}
+
+.startMenuContent .startMenuItems .largeStartMenuItem img {
+  width: 24px;
+}
+
+.startMenuContent .startMenuItems .largeStartMenuItem:hover {
+  background: #ebc7ff;
+  background: linear-gradient(180deg, rgba(235, 199, 255, 1) 0%, rgba(134, 32, 132, 1) 15%, rgba(134, 32, 132, 1) 50%, rgba(97, 20, 96, 1) 100%);
+}
+
+.startMenuContent .startMenuItems .largeStartMenuItem img {
+  transition: transform var(--motion-time) ease;
+}
+
+.startMenuContent .startMenuItems .largeStartMenuItem:hover img,
+.startMenuContent .startMenuItems .largeStartMenuItem:focus-visible img {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.startMenuContent .startMenuItems .StartMenuitem img {
+  width: 24px;
+}
+
+.startMenuContent .startMenuItems .StartMenuitem:hover {
+  background: #ebc7ff;
+  background: linear-gradient(180deg, rgba(235, 199, 255, 1) 0%, rgba(134, 32, 132, 1) 15%, rgba(134, 32, 132, 1) 50%, rgba(97, 20, 96, 1) 100%);
+}
+
+.startMenuContent .startMenuItems .StartMenuitem img {
+  transition: transform var(--motion-time) ease;
+}
+
+.startMenuContent .startMenuItems .StartMenuitem:hover img,
+.startMenuContent .startMenuItems .StartMenuitem:focus-visible img {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.webrings {
+  color: white;
+  font-family: "Ticketing";
+  margin-top: -20px;
+}
+
+.webrings a {
   color: white;
 }
