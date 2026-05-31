@@ -252,7 +252,7 @@ body {
 /* visible separators inside the start menu */
 .startMenuContent .startMenuItems hr {
   color: white;
-  border: 1px solid #ECADFF;
+  border: 1px solid #ecadff;
   width: 100%;
 }
 
