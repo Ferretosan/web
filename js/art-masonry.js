@@ -1,5 +1,6 @@
 (() => {
   const grids = document.querySelectorAll('.grid');
+  const loadingScreen = document.getElementById('loadingScreen');
 
   const waitForImages = (images) => {
     const pending = [];
@@ -60,14 +61,32 @@
 
   const overlay = document.createElement('div');
   overlay.className = 'photo-overlay';
-  overlay.innerHTML = '<img alt="" />';
+  overlay.innerHTML = '<img alt="" /><button class="download-btn"><i> Download Full Res</i></button>';
   document.body.appendChild(overlay);
 
   const overlayImg = overlay.querySelector('img');
+  const downloadBtn = overlay.querySelector('.download-btn');
   const closeOverlay = () => {
     overlay.classList.remove('is-open');
     overlayImg.src = '';
   };
+
+  downloadBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const url = overlayImg.src.split('?')[0];
+    const fullResUrl = url + '?ixlib=rb-4.0.3&force=true';
+    
+    fetch(fullResUrl)
+      .then(res => res.blob())
+      .then(blob => {
+        const blobUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = 'photo.jpg';
+        link.click();
+        URL.revokeObjectURL(blobUrl);
+      });
+  });
 
   overlay.addEventListener('click', () => closeOverlay());
   window.addEventListener('keydown', (event) => {
@@ -76,7 +95,7 @@
     }
   });
 
-  grids.forEach((grid) => {
+  const gridPromises = Array.from(grids).map((grid) => {
     const items = Array.from(grid.querySelectorAll('.item'));
     items.forEach((item) => {
       if (item.dataset.overlayReady) {
@@ -88,12 +107,20 @@
         overlay.classList.add('is-open');
       });
     });
-    waitForImages(items).then(() => layoutGrid(grid));
-
+    
     let resizeTimer;
     window.addEventListener('resize', () => {
       window.clearTimeout(resizeTimer);
       resizeTimer = window.setTimeout(() => layoutGrid(grid), 150);
     });
+
+    return waitForImages(items).then(() => layoutGrid(grid));
+  });
+
+  Promise.all(gridPromises).then(() => {
+    if (loadingScreen) {
+      loadingScreen.style.display = 'none';
+    }
   });
 })();
+
