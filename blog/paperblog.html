@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No, this is the coolest way to blog - The Ferretosan Blog</title>
+    <link rel="stylesheet" href="../style/blogPost.css" />
+    <link rel="icon" href="../img/blog.png" />
+  </head>
+  <body>
+    <main class="postPage">
+      <div class="postHeadingRow">
+        <div class="postWordmark">
+          <span class="wordmarkSS4"
+            ><i><b>The</b></i></span
+          ><span class="wordmarkTicketing">Ferretosan</span
+          ><span class="wordmarkSS4"
+            ><i><b>Blog</b></i></span
+          >
+        </div>
+        <div class="postMeta">
+          <span class="postDate">05/07/2026</span>
+          <span class="postTitle">No, this is the coolest way to blog</span>
+        </div>
+      </div>
+      <a class="backLink" href="../blog.html">← Back to blog</a>
+      <article>
+        <p>Writing blog posts is, in my opinion, one of the best ways to exercise your brain and get your opinion in the wild, while also learning how to build a website. But, being someone who already uses the computer far too much, makes it kind of negative. But, a simple notebook can change that.</p>
+
+        <p>I recently got a notebook, a very small one at size "B6", but I had no use for it. However, I wasn't letting beautiful paper, from beautiful trees, go to waste. I quickly thought of a solution, though, getting back into blogging.</p>
+
+        <p>Blogging on paper is kinda a lost art form.<br>Well, actually, it was never an art form.<br>Well, it is now!</p>
+
+        <p>Blogging on paper is ridiculously easy. Personally I'd recommend picking up a small notebook, a mechanical pencil and an eraser. But you just need paper, and something to write with. You also need to have the mindset. This isn't something you can buy in a store (yet!), it's something you acquire through discipline and willingness to try.</p>
+
+        <p>If you're ready to begin, then I'm going to give you some tips and tricks.</p>
+
+        <h1>Tips & Tricks</h1>
+
+        <ol>
+          <li>
+            <p>Write in a format.</p>
+
+            <p>This may sound stupid, but using some kind of format is a great way to make sure our blog posts will transfer nicely on HTML or Markdown, and remain fully readable in your book. I highly recommend using Markdown (really just for headings to be honest) because it's much cleaner and easier than HTML tags.</p>
+          </li>
+          <li>
+            <p>Don't worry abut spelling or other mistakes; be zen</p>
+            
+            <p>Worrying about mistakes ruins a writing session instantly. No joke. The biggest thing about writing a blog post on paper is that it will be transferred to your computer, then you can fix the mistakes. Just write and worry about your bad spelling later.</p>
+          </li>
+          <li>
+            <p>Learn how to transfer from your notebook to your computer</p>
+
+            <p>This may seem like a really easy thing to do, but there are so many different ways to transfer, it ends up being overly complex.</p>
+
+            <p>You've really got to play to your strengths here. Personally, I think that I am pretty good at typing, so I simply transfer it straight into my code editor, Visual Studio Code, check for spelling mistakes with a neat little extension called <a href="https://writewithharper.com/">Harper</a>, and go along with my day. Another method is transferring it into a Markdown editor (Google Docs is one nowadays!) and convert that Markdown into HTML, something that is pretty easy to do.</p>
+
+            <p>But not everybody is great at typing. You can use voice to text (which personally, I don't really like), or use a compelling strategy of scanning the paper into AI or something.</p>
+
+            <p>But really, just stick to typing. It's easier.</p>
+          </li>
+        </ol>
+
+        <hr>
+
+        <p>So that's pretty much it. If you've enjoyed this, I would say consider subscribing to my RSS feed or newsletter or something, but that's not happening lol.</p>
+
+        <p><b>Get paper blogging!</b></p>
+
+        <p>(secret 4th tip: experiment and figure out what works for you)</p>
+      </article>
+
+      <section class="comments">
+        <h2>Comments</h2>
+        <div id="utterances-container"></div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        const originalTitle = document.title;
+        document.title = "blog/paperblog.html";
+
+        const utterances = document.createElement("script");
+        utterances.src = "https://utteranc.es/client.js";
+        utterances.async = true;
+        utterances.crossOrigin = "anonymous";
+        utterances.setAttribute("repo", "Ferretosan/web-blog-comments");
+        utterances.setAttribute("issue-term", "title");
+        utterances.setAttribute("theme", "preferred-color-scheme");
+        utterances.setAttribute("label", "blog-comment");
+        utterances.addEventListener("load", function () {
+          document.title = originalTitle;
+        });
+        utterances.addEventListener("error", function () {
+          document.title = originalTitle;
+        });
+
+        document.getElementById("utterances-container").appendChild(utterances);
+      })();
+    </script>
+  </body>
+</html>
