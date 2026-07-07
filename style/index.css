@@ -32,12 +32,7 @@
 
 body {
   margin: 0;
-  /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=390947&c2=7b0177&gt=r&gd=dbb
-*/
   background: #390947;
-  background: radial-gradient(at center top, #7b0177, #390947);
   padding-bottom: var(--hub-height);
 }
 
@@ -128,8 +123,7 @@ body {
   align-items: center;
   overflow-x: auto;
   width: 100%;
-  background: #ebc7ff;
-  background: linear-gradient(180deg, rgba(235, 199, 255, 1) 0%, rgba(89, 38, 108, 1) 15%, rgba(85, 38, 105, 1) 50%, rgba(112, 63, 143, 1) 100%);
+  background: #4c2660;
   box-sizing: border-box;
   z-index: 20;
 }
@@ -139,18 +133,16 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   color: white;
   font-family: "Ticketing";
-  background: #ffc7ff;
-  background: linear-gradient(180deg, rgba(255, 199, 255, 1) 0%, rgba(160, 43, 158, 1) 15%, rgba(162, 48, 158, 1) 50%, rgba(199, 76, 199, 1) 100%);
+  background: #8d3c8d;
   padding: 3px;
   border-radius: 5px;
 }
 
 .hub .item:hover {
-  background: #ebc7ff;
-  background: linear-gradient(180deg, rgba(235, 199, 255, 1) 0%, rgba(134, 32, 132, 1) 15%, rgba(134, 32, 132, 1) 50%, rgba(97, 20, 96, 1) 100%);
+  background: #693684;
 }
 
 .hub .item:hover img,
@@ -166,8 +158,7 @@ body {
   gap: 8px;
   color: white;
   font-family: "Ticketing";
-  background: #fcf2ff;
-  background: linear-gradient(180deg, rgba(252, 242, 255, 1) 0%, rgba(166, 0, 255, 1) 15%, rgba(166, 0, 255, 1) 50%, rgba(88, 30, 117, 1) 100%);
+  background: #9217b7;
   padding: 5px;
   border-radius: 0px 0px 30px 0px;
 }
@@ -179,13 +170,14 @@ body {
   bottom: calc(var(--hub-height) + 18px);
   padding: 6px 10px;
   background: white;
-  color: #4b145f;
+  color: #000000;
   font-family: "Ticketing";
   font-size: 14px;
   line-height: 1;
   z-index: 22;
   pointer-events: none;
   width: 100px;
+  border-radius: 5px;
 }
 
 .startMenu::after {
@@ -196,14 +188,14 @@ body {
   width: 12px;
   height: 12px;
   background: white;
+  border-radius: 2px;
   transform: rotate(-45deg);
   z-index: 21;
   pointer-events: none;
 }
 
 .startMenu:hover {
-  background: #e9bfff;
-  background: linear-gradient(180deg, rgba(233, 191, 255, 1) 0%, rgba(122, 5, 185, 1) 15%, rgba(122, 5, 185, 1) 50%, rgba(83, 28, 112, 1) 100%);
+  background: #7f2aad;
 }
 
 .startMenu:hover img,
@@ -331,7 +323,7 @@ a:hover {
   font-family: "Rubik";
   padding: 30px;
   padding-right: 30px;
-  border: 4px solid rgb(160, 43, 158);
+  border: 4px solid rgb(109, 43, 107);
   border-radius: 5px;
   position: relative;
 }
@@ -341,8 +333,7 @@ a:hover {
 }
 
 .window .primaryWindowHeading {
-  background: #ffc7ff;
-  background: linear-gradient(180deg, rgba(255, 199, 255, 1) 0%, rgba(160, 43, 158, 1) 15%, rgba(162, 48, 158, 1) 50%, rgba(199, 76, 199, 1) 100%);
+  background: rgb(109, 43, 107);
   padding: 0px 2px 2px 20px;
   margin: 30px 0px 0px 30px;
   box-sizing: border-box;
@@ -476,8 +467,7 @@ a:hover {
 }
 
 .window .secondaryWindowHeading {
-  background: #ffc7ff;
-  background: linear-gradient(180deg, rgba(255, 199, 255, 1) 0%, rgba(160, 43, 158, 1) 15%, rgba(162, 48, 158, 1) 50%, rgba(199, 76, 199, 1) 100%);
+  background: rgb(109, 43, 107);
   padding: 0px 2px 2px 20px;
   margin: 20px -30px 0px -30px;
   box-sizing: border-box;
@@ -661,8 +651,7 @@ h4 {
   gap: 8px;
   color: white;
   font-family: "Ticketing";
-  background: #ffc7ff;
-  background: linear-gradient(180deg, rgba(255, 199, 255, 1) 0%, rgba(160, 43, 158, 1) 15%, rgba(162, 48, 158, 1) 50%, rgba(199, 76, 199, 1) 100%);
+  background: rgb(109, 43, 107);
   padding: 3px;
   border-radius: 5px;
   margin: 5px 0px 0px 0px;
@@ -673,8 +662,7 @@ h4 {
 }
 
 .startMenuContent .startMenuItems .largeStartMenuItem:hover {
-  background: #ebc7ff;
-  background: linear-gradient(180deg, rgba(235, 199, 255, 1) 0%, rgba(134, 32, 132, 1) 15%, rgba(134, 32, 132, 1) 50%, rgba(97, 20, 96, 1) 100%);
+  background: rgb(149, 58, 146);
 }
 
 .startMenuContent .startMenuItems .largeStartMenuItem img {
@@ -691,8 +679,7 @@ h4 {
 }
 
 .startMenuContent .startMenuItems .StartMenuitem:hover {
-  background: #ebc7ff;
-  background: linear-gradient(180deg, rgba(235, 199, 255, 1) 0%, rgba(134, 32, 132, 1) 15%, rgba(134, 32, 132, 1) 50%, rgba(97, 20, 96, 1) 100%);
+  background: #643c7a;
 }
 
 .startMenuContent .startMenuItems .StartMenuitem img {
