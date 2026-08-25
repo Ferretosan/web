@@ -460,12 +460,14 @@ code {
 
 .heroTop h1 {
   font-size: 500%;
+  margin: 0px;
 }
 
 .heroTop {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 50px;
 }
 
 @media (max-width: 700px) {
@@ -478,7 +480,6 @@ code {
 .heroTop img {
   width: 200px;
   height: 200px;
-  margin-top: 30px;
   transition: all 0.7s ease;
 }
 
@@ -505,4 +506,11 @@ code {
 
 .heroBadge:hover {
   letter-spacing: 2px;
+}
+
+/* ofc i had to call the 88x31s "ogbuttons" :/ */
+
+.ogbuttons img {
+  border-radius: 0px;
+  image-rendering: pixelated;
 }
