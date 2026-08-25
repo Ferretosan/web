@@ -4,28 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ferret's Corner - Reflections of something or other</title>
-    <link rel="icon" href="img/favicon.png" />
+    <link rel="icon" href="img/newfavi.png" />
     <link rel="stylesheet" href="style/index.css" />
+    <script>
+      const oldHashes = {
+        "#hub": "/",
+        "#blog": "/blog",
+        "#music": "/music",
+        "#art": "/art",
+        "#photos": "/art",
+        "#pixelart": "/art",
+        "#pixel-art": "/art",
+      };
+
+      const target = oldHashes[location.hash];
+      if (target) {
+        location.replace(target);
+      }
+    </script>
   </head>
   <body>
     <nav>
       <div class="navLeft">
-        <a class="mainIcon" href="index.html"><img src="img/favicon.png" alt="Ferret's Corner" /> Ferret's Corner</a>
+        <a class="mainIcon" href="index.html"><img src="img/newfavi.png" alt="Ferret's Corner" /> <span>Ferret's Corner</span></a>
       </div>
       <div class="navRight">
-        <a href="art.html"><img class="smallIcon" src="img/art.png" alt="Ferretosan Art" /></a>
-        <a href="music.html"><img class="smallIcon" src="img/music.png" alt="Ferretosan Music" /></a>
-        <a href="https://arcadio.ferretosan.com"><img src="img/hub/arcadio-icon.png" alt="Arcadio" /></a>
-        <a href="https://ideagen.ferretosan.com"><img src="img/hub/ideagen-icon.png" alt="Ideagen" /></a>
-        <a href="https://blackjack.ferretosan.com"><img src="img/hub/blackjack-icon.png" alt="Blackjack" /></a>
-        <a href="https://2factor.ferretosan.com"><img src="img/hub/2factor.png" alt="2factor" /></a>
-        <a href="https://japan.school.ferretosan.com"><img src="img/hub/japan-school.png" alt="Japan's Travel Guide" /></a>
-        <a href="https://adaptations.school.ferretosan.com"><img src="img/hub/adapt-school.png" alt="Animal Adaptations" /></a>
+        <a href="art.html"><img src="img/brush.svg" /> Art</a>
+        <a href="music.html"><img src="img/music.svg" /> Music</a>
+        <a href="school.html"><img src="img/hub/school.svg" /> School Proj.</a>
+        <div class="dropdown">
+          <button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="projects-dropdown">
+            <img src="img/icons.svg" /> Projects
+            <span aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-content" id="projects-dropdown">
+            <a href="https://arcadio.ferretosan.com"><img src="img/hub/arcadio-icon.png" /> arcadio</a>
+            <a href="https://2factor.ferretosan.com"><img src="img/hub/2factor.png" /> 2factor</a>
+            <a href="https://blackjack.ferretosan.com"><img src="img/hub/blackjack-icon.png" /> Blackjack</a>
+            <a href="https://ideagen.ferretosan.com"><img src="img/hub/ideagen-icon.png" /> Ideagen</a>
+          </div>
+        </div>
       </div>
     </nav>
     <div class="content">
+      <section class="hero">
+        <div>
+          <div class="heroTop">
+            <h1><span>Hello, I'm</span><br /><span class="headingTicketing">Ferretosan</span></h1>
+            <img src="img/newfavi.png" />
+          </div>
+          <h3>Computer Setup</h3>
+          <div class="heroInfo">
+            <div class="heroBadge"><span>Firefox</span></div>
+            <div class="heroBadge"><span>macOS</span></div>
+            <div class="heroBadge"><span>DuckDuckGo</span></div>
+            <div class="heroBadge"><span>PlayStation</span></div>
+            <div class="heroBadge"><span>Steam</span></div>
+          </div>
+          <h3>Languages and tools</h3>
+          <div class="heroInfo">
+            <div class="heroBadge"><span>HTML</span></div>
+            <div class="heroBadge"><span>CSS</span></div>
+            <div class="heroBadge"><span>JavaScript</span></div>
+            <div class="heroBadge"><span>Markdown</span></div>
+            <div class="heroBadge"><span>Python</span></div>
+            <div class="heroBadge"><span>Bash</span></div>
+          </div>
+          <div class="heroInfo">
+            <div class="heroBadge"><span>Obsidian</span></div>
+            <div class="heroBadge"><span>VS Code</span></div>
+            <div class="heroBadge"><span>Homebrew</span></div>
+            <div class="heroBadge"><span>Kitty Terminal</span></div>
+            <div class="heroBadge"><span>Git</span></div>
+            <div class="heroBadge"><span>Affinity</span></div>
+            <div class="heroBadge"><span>Unsplash</span></div>
+          </div>
+        </div>
+        <div class="88x31-row"></div>
+        <div class="scrollDown">
+          <span>Scroll down to see more...</span>
+        </div>
+      </section>
       <section class="aboutMe">
-        <p>Version 11.0.1 [NEXT-GEN Preview]</p>
+        <p>Version 11.0.2 [NEXT-GEN Preview]</p>
         <h1>About me!</h1>
         <div class="textSection">
           <img src="img/banner.png" />
@@ -106,5 +167,6 @@
         </div>
       </section>
     </div>
+    <script src="js/index.js"></script>
   </body>
 </html>

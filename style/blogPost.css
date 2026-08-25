@@ -20,10 +20,19 @@
   src: url(/fonts/JetBrainsMono[wght].ttf);
 }
 
+:root {
+  --bg: #1c141e;
+  --panel: #3a2441;
+  --accent: #b35aca;
+  --accent-bright: #f8a8ff;
+  --accent-soft: #f0d8ff;
+  --text: #ffffff;
+}
+
 body {
   margin: 0;
-  background-color: #1c141e;
-  color: white;
+  background-color: var(--bg);
+  color: var(--text);
   font-family: "ss4";
 }
 
@@ -51,7 +60,7 @@ body {
   font-family: "ss4";
   font-size: 1rem;
   line-height: 1;
-  color: #b35aca;
+  color: var(--accent);
 }
 
 .postWordmark {
@@ -69,7 +78,7 @@ body {
 
 .wordmarkTicketing {
   font-family: "Ticketing";
-  color: #b35aca;
+  color: var(--accent);
   margin-left: 5px;
 }
 
@@ -77,7 +86,7 @@ body {
   font-family: "ss4";
   font-size: 1.5rem;
   line-height: 1;
-  color: #f8a8ff;
+  color: var(--accent-bright);
 }
 
 .blogPostDate {
@@ -85,23 +94,23 @@ body {
   margin-bottom: 8px;
   font-family: "ss4";
   font-size: 0.95rem;
-  color: #b35aca;
+  color: var(--accent);
 }
 
 .backLink {
   display: inline-block;
   margin-bottom: 24px;
-  color: #f8a8ff;
+  color: var(--accent-bright);
   text-decoration: none;
   transition:
-    transform 200ms ease,
+    all 200ms ease,
     text-decoration-color 200ms ease;
   transform-origin: left center;
 }
 
 .backLink:hover {
   text-decoration: underline;
-  transform: scale(0.9);
+  letter-spacing: 2px;
 }
 
 article p {
@@ -117,25 +126,25 @@ article h3,
   font-family: "ss4";
   line-height: 1;
   margin: 2rem 0 1rem;
-  color: #f0d8ff;
+  color: var(--accent-soft);
 }
 
 article h1 {
   font-size: 2.4rem;
-  background-color: #3a2441;
+  background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   border-radius: 5px;
 }
 
 article h1::before {
   content: "#";
-  color: #b35aca;
+  color: var(--accent);
 }
 
 article h2,
 .comments h2 {
   font-size: 1.9rem;
-  background-color: #3a2441;
+  background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   border-radius: 5px;
 }
@@ -143,19 +152,19 @@ article h2,
 article h2::before,
 .comments h2::before {
   content: "##";
-  color: #b35aca;
+  color: var(--accent);
 }
 
 article h3 {
   font-size: 1.5rem;
-  background-color: #3a2441;
+  background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   border-radius: 5px;
 }
 
 article h3::before {
   content: "###";
-  color: #b35aca;
+  color: var(--accent);
 }
 
 article hr {
@@ -166,20 +175,20 @@ article hr {
 
 article a,
 .comments a {
-  color: #f8a8ff;
+  color: var(--accent-bright);
   display: inline-block;
   text-decoration: none;
   transition:
-    transform 200ms ease,
+    all 200ms ease,
     text-decoration-color 200ms ease;
   transform-origin: left center;
 }
 
 article a:hover,
 .comments a:hover {
-  color: #f8a8ff;
+  color: var(--accent-bright);
   text-decoration: underline;
-  transform: scale(0.9);
+  letter-spacing: 2px;
 }
 
 .comments {

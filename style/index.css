@@ -20,9 +20,21 @@
   src: url(/fonts/JetBrainsMono[wght].ttf);
 }
 
+:root {
+  --bg: #1c141e;
+  --bg-deep: #26002d;
+  --panel: #3a2441;
+  --panel-alt: #4d3057;
+  --accent: #b35aca;
+  --accent-bright: #f8a8ff;
+  --accent-soft: #f0d8ff;
+  --text: #ffffff;
+  --text-muted: #e1a0ed;
+}
+
 body {
-  background-color: #1c141e;
-  color: white;
+  background-color: var(--bg);
+  color: var(--text);
   font-family: "ss4";
   margin: 0;
   padding: 10px;
@@ -31,75 +43,197 @@ body {
 
 /* Always Dark Mode Styles */
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1c141e;  /* Dark track background - constant dark mode*/
+  background: var(--bg); /* Dark track background - constant dark mode*/
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #3a2441;   /* Darker thumb color */
+  background: var(--panel); /* Darker thumb color */
 }
 
 /* Hover effect on the thumb */
 ::-webkit-scrollbar-thumb:hover {
-    background: #3a2441;
+  background: var(--panel);
 }
 
 /* Firefox - Always Dark Mode */
 html {
-    scrollbar-color: #3a2441 #1c141e; /* Thumb and track colors */
-    scrollbar-width: thin;       /* Optional: Thin scrollbar width */
+  scrollbar-color: var(--panel) var(--bg); /* Thumb and track colors */
+  scrollbar-width: thin; /* Optional: Thin scrollbar width */
 }
 
 nav {
-  background-color: #3a2441;
-  padding: 10px;
-  text-align: center;
+  background-color: var(--panel);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 14px;
   border-radius: 10px;
   position: sticky;
   top: 10px;
   z-index: 10;
   margin-bottom: 20px;
-  font-family: "Ticketing";
-  height: 35px;
-  border: 5px solid #1c141e;
+  min-height: 35px;
+  border: 5px solid var(--bg);
 }
 
 nav a {
   text-decoration: none;
+  transition: all 250ms ease;
+}
+
+nav a:hover {
+  letter-spacing: 2px;
 }
 
 .navLeft {
-  position: relative;
-  float: left;
-  top: 3px;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  font-family: "Ticketing";
 }
 
 .navRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.navRight > a,
+.dropbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+  color: white;
+  font: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.dropbtn:hover {
+  letter-spacing: 2px;
+}
+
+.dropdown {
   position: relative;
-  float: right;
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 25px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  min-width: 250px;
+  max-width: fit-content;
+  background-color: var(--panel);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 20;
+  margin-top: 25px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.dropdown-content a img {
+  width: 18px;
+  height: 18px;
+  transform: none;
+}
+
+.dropdown-content a img:hover {
+  transform: none;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus-visible {
+  background-color: var(--panel-alt);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+.dropdown.dropdown--open .dropdown-content {
+  display: block;
+}
+
+.dropbtn:hover,
+.dropbtn:focus-visible,
+.navRight > a:hover,
+.navRight > a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 nav span {
-  color: #b35aca;
+  color: var(--accent);
   text-decoration: none;
 }
 
 .aboutMe img {
-  width: 500px;
+  max-width: 500px;
 }
 
 nav img {
   height: 30px;
   vertical-align: middle;
-  transition: all 200ms ease;
+  transition: all 0.5s ease;
   border-radius: 0;
 }
 
-nav img:hover {
-  transform: scale(0.8);
+nav a img:hover,
+.dropbtn img:hover {
+  transform: none;
+}
+
+.navLeft a img:hover {
+  transform: rotate(360deg);
+}
+
+.navRight > a img,
+.dropbtn > img {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex: 0 0 18px;
+  object-fit: contain;
+}
+
+.dropbtn > img {
+  margin-top: 1px;
+}
+
+nav img:hover,
+.heroTop img:hover {
+  transform: rotate(360deg);
 }
 
 .smallIcon {
@@ -134,13 +268,17 @@ nav img:hover {
 
 .headingTicketing {
   font-family: "Ticketing";
-  margin-left: 10px;
-  color: #b35aca;
+  color: var(--accent);
+  transition: all 500ms ease;
+}
+
+.headingTicketing:hover {
+  letter-spacing: 10px;
 }
 
 .contentTicketing {
   font-family: "Ticketing";
-  color: #b35aca;
+  color: var(--accent);
 }
 
 .subheading {
@@ -152,33 +290,31 @@ nav img:hover {
   display: inline-block;
   color: white;
   text-decoration: none;
-  transition:
-    all 200ms ease;
+  transition: all 200ms ease;
   transform-origin: left center;
 }
 
 .subheading a:hover {
   text-decoration: underline;
-  transform: scale(0.9);
+  letter-spacing: 2px;
 }
 
 .aboutMe a {
   display: inline-block;
   color: white;
   text-decoration: none;
-  transition:
-    all 200ms ease;
+  transition: all 200ms ease;
   transform-origin: left center;
 }
 
 .aboutMe a:hover {
   text-decoration: underline;
-  transform: scale(0.9);
+  letter-spacing: 2px;
 }
 
 .blogPostCard {
   font-family: "ss4";
-  background-color: #3a2441;
+  background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   margin-top: 20px;
   border-radius: 5px;
@@ -189,7 +325,7 @@ nav img:hover {
   margin-top: 8px;
   font-family: "ss4";
   font-size: 0.95rem;
-  color: #b35aca;
+  color: var(--accent);
 }
 
 .blogPostCard h3,
@@ -202,14 +338,14 @@ h4 {
   display: inline-block;
   text-decoration: none;
   transition:
-    transform 200ms ease,
+    all 200ms ease,
     text-decoration-color 200ms ease;
   transform-origin: left center;
 }
 
 .blogPostCard a:hover {
   text-decoration: underline;
-  transform: scale(0.9);
+  letter-spacing: 2px;
 }
 
 .blogPosts {
@@ -218,7 +354,7 @@ h4 {
 }
 
 hr {
-  border: 2px solid #b35aca;
+  border: 2px solid var(--accent);
   border-radius: 2px;
 }
 
@@ -231,34 +367,34 @@ code {
 }
 
 .content a {
-  color: #b35aca;
+  color: var(--accent);
   text-decoration: none;
   transition:
-    transform 200ms ease,
+    all 200ms ease,
     text-decoration-color 200ms ease;
   transform-origin: left center;
 }
 
 .content a:hover {
   text-decoration: underline;
-  transform: scale(0.9);
+  letter-spacing: 2px;
 }
 
 .aboutMe h1 {
   font-size: 2.4rem;
-  background-color: #3a2441;
+  background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   border-radius: 5px;
 }
 
 .aboutMe h1::before {
   content: "#";
-  color: #b35aca;
+  color: var(--accent);
 }
 
 .aboutMe h2 {
   font-size: 1.9rem;
-  background-color: #3a2441;
+  background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   border-radius: 5px;
 }
@@ -266,26 +402,107 @@ code {
 .aboutMe h2::before,
 .comments h2::before {
   content: "##";
-  color: #b35aca;
+  color: var(--accent);
 }
 
 .aboutMe h3 {
   font-size: 1.5rem;
-  background-color: #3a2441;
+  background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   border-radius: 5px;
 }
 
 .aboutMe h3::before {
   content: "###";
-  color: #b35aca;
+  color: var(--accent);
 }
 
 .mainIcon {
   color: white;
 }
 
-.mainIcon:hover {
+.mainIcon span {
+  color: white;
+}
+
+.mainIcon span:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+.scrollDown {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%) translateY(8px);
+  z-index: 9;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+  padding: 7px 12px 7px 12px;
+  border-radius: 5px;
+  background-color: var(--panel);
+  width: fit-content;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.scrollDown.scrollDown--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.heroTop h1 {
+  font-size: 500%;
+}
+
+.heroTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  .heroTop {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.heroTop img {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+  transition: all 0.7s ease;
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  overflow-x: auto;
+}
+
+.heroBadge {
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  background-color: var(--panel);
+  border: 2px solid var(--accent);
+  width: fit-content;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  transition: all 250ms;
+}
+
+.heroBadge:hover {
+  letter-spacing: 2px;
 }
