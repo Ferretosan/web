@@ -1,6 +1,3 @@
-/* lowest desktop screen = 1354px */
-/* lowest desktop screen = 764px */
-
 /* Fonts */
 
 @font-face {
@@ -23,528 +20,301 @@
   src: url(/fonts/JetBrainsMono[wght].ttf);
 }
 
-/* Main Styling thing idk */
-
 :root {
-  --motion-time: 200ms;
-  --hub-height: 56px;
+  --bg: #1c141e;
+  --bg-deep: #26002d;
+  --panel: #3a2441;
+  --panel-alt: #4d3057;
+  --accent: #b35aca;
+  --accent-bright: #f8a8ff;
+  --accent-soft: #f0d8ff;
+  --text: #ffffff;
+  --text-muted: #e1a0ed;
 }
 
 body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "ss4";
   margin: 0;
-  background: #390947;
-  padding-bottom: var(--hub-height);
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.mainItems img {
-  width: 100px;
-  image-rendering: pixelated;
-  transition: transform var(--motion-time) ease;
+/* Always Dark Mode Styles */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.mainItems img:hover {
-  transform: scale(1.3) rotate(2deg);
+::-webkit-scrollbar-track {
+  background: var(--bg); /* Dark track background - constant dark mode*/
 }
 
-.mainItems {
+::-webkit-scrollbar-thumb {
+  background: var(--panel); /* Darker thumb color */
+}
+
+/* Hover effect on the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--panel);
+}
+
+/* Firefox - Always Dark Mode */
+html {
+  scrollbar-color: var(--panel) var(--bg); /* Thumb and track colors */
+  scrollbar-width: thin; /* Optional: Thin scrollbar width */
+}
+
+nav {
+  background-color: var(--panel);
   display: flex;
-  flex-direction: column;
-  width: fit-content;
-  margin-left: 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+  margin-bottom: 20px;
+  min-height: 35px;
+  border: 5px solid var(--bg);
 }
 
-@media (max-width: 764px) {
-  .mainItems {
-    flex-direction: row;
-  }
+nav a {
+  text-decoration: none;
+  transition: all 250ms ease;
 }
 
-/* Layout: place mainItems at left and windows in a horizontal row */
-.workspace {
+nav a:hover {
+  letter-spacing: 2px;
+}
+
+.navLeft {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-start;
-  padding: 20px;
+  align-items: center;
+  flex: 0 0 auto;
+  font-family: "Ticketing";
 }
 
-@media (min-width: 765px) {
-  .workspace {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 1600px) {
-  .workspace {
-    min-height: calc(100vh - 80px);
-    align-items: flex-start;
-  }
-
-  .windowsRow {
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.windowsRow {
+.navRight {
   display: flex;
-  gap: 24px;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-wrap: wrap;
 }
 
-.windowsColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.navRight > a,
+.dropbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+  color: white;
+  font: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 250ms ease;
 }
 
-/* Responsive: stack everything vertically on narrower screens */
-@media (max-width: 1354px) {
-  .windowsRow {
-    flex-direction: column;
-  }
+.dropbtn:hover {
+  letter-spacing: 2px;
 }
 
-.hub img {
+.dropdown {
+  position: relative;
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
   height: 25px;
 }
 
-.hub .item img {
-  transition: transform var(--motion-time) ease;
-}
-
-.hub {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  overflow-x: auto;
-  width: 100%;
-  background: #4c2660;
-  box-sizing: border-box;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  min-width: 250px;
+  max-width: fit-content;
+  background-color: var(--panel);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 8px;
   z-index: 20;
+  margin-top: 25px;
 }
 
-.hub .item {
-  flex: 0 0 185px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-  color: white;
-  font-family: "Ticketing";
-  background: #8d3c8d;
-  padding: 3px;
+.dropdown-content a {
+  display: block;
+  padding: 8px 10px;
   border-radius: 5px;
-}
-
-.hub .item:hover {
-  background: #693684;
-}
-
-.hub .item:hover img,
-.hub .item:focus-visible img {
-  transform: scale(1.1) rotate(10deg);
-}
-
-.startMenu {
-  flex: 0 0 120px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
   color: white;
-  font-family: "Ticketing";
-  background: #9217b7;
-  padding: 5px;
-  border-radius: 0px 0px 30px 0px;
 }
 
-.startMenu::before {
-  content: attr(data-bubble);
-  position: fixed;
-  left: 10px;
-  bottom: calc(var(--hub-height) + 18px);
-  padding: 6px 10px;
-  background: white;
-  color: #000000;
-  font-family: "Ticketing";
-  font-size: 14px;
-  line-height: 1;
-  z-index: 22;
-  pointer-events: none;
-  width: 100px;
-  border-radius: 5px;
+.dropdown-content a img {
+  width: 18px;
+  height: 18px;
+  transform: none;
 }
 
-.startMenu::after {
-  content: "";
-  position: fixed;
-  left: 34px;
-  bottom: calc(var(--hub-height) + 12px);
-  width: 12px;
-  height: 12px;
-  background: white;
-  border-radius: 2px;
-  transform: rotate(-45deg);
-  z-index: 21;
-  pointer-events: none;
+.dropdown-content a img:hover {
+  transform: none;
 }
 
-.startMenu:hover {
-  background: #7f2aad;
+.dropdown-content a:hover,
+.dropdown-content a:focus-visible {
+  background-color: var(--panel-alt);
 }
 
-.startMenu:hover img,
-.startMenu:focus-visible img {
-  transform: scale(1) rotate(360deg);
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
 }
 
-.startMenu img {
-  transition: transform 400ms ease;
+.dropdown.dropdown--open .dropdown-content {
+  display: block;
 }
 
-.startMenuContent {
-  position: fixed;
-  left: 8px;
-  bottom: calc(var(--hub-height) + 8px);
-  width: 400px;
-  padding: 12px;
-  box-sizing: border-box;
-  background: #1a0421;
-  border: 4px solid rgb(160, 43, 158);
-  border-radius: 8px 8px 0 0;
-  color: white;
-  z-index: 21;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(120px);
-  transition:
-    opacity var(--motion-time) ease,
-    transform var(--motion-time) ease,
-    visibility var(--motion-time) ease;
-  pointer-events: none;
+.dropbtn:hover,
+.dropbtn:focus-visible,
+.navRight > a:hover,
+.navRight > a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
-.startMenuContent--open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-
-.startMenuContent .startMenuHeader {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-
-.startMenuContent .startMenuHeader img {
-  width: 48px;
-  height: 48px;
-}
-
-.startMenuContent .startMenuHeader h1 {
-  margin: 0;
-  font-size: 28px;
-  line-height: 1;
-}
-
-.startMenuContent .startMenuItems {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-height: calc(100vh - var(--hub-height) - 120px);
-  overflow-y: auto;
-  scrollbar-width: none;
-}
-
-.startMenuContent .startMenuItems h2 {
-  margin: 8px 0 0;
-  font-size: 20px;
-  line-height: 1;
-}
-
-/* visible separators inside the start menu */
-.startMenuContent .startMenuItems hr {
-  color: white;
-  border: 1px solid #ecadff;
-  width: 100%;
-}
-
-.startMenuContent .startMenuItems .section {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.startMenuContent .socials .section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-a {
+nav span {
+  color: var(--accent);
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+.aboutMe img {
+  max-width: 500px;
 }
 
-.item {
-  font-family: "Ticketing";
+nav img {
+  height: 30px;
+  vertical-align: middle;
+  transition: all 0.5s ease;
+  border-radius: 0;
 }
 
-.mainItems .item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  margin: 8px;
-  color: white;
+nav a img:hover,
+.dropbtn img:hover {
+  transform: none;
 }
 
-.mainItems .item img {
-  display: block;
-  margin: 0 auto 6px;
+.navLeft a img:hover {
+  transform: rotate(360deg);
 }
 
-.window {
-  background-color: black;
-  color: white;
-  width: 500px;
-  font-family: "Rubik";
-  padding: 30px;
-  padding-right: 30px;
-  border: 4px solid rgb(109, 43, 107);
-  border-radius: 5px;
-  position: relative;
-}
-
-.window a {
-  color: rgb(255, 174, 254);
-}
-
-.window .primaryWindowHeading {
-  background: rgb(109, 43, 107);
-  padding: 0px 2px 2px 20px;
-  margin: 30px 0px 0px 30px;
-  box-sizing: border-box;
-  color: white;
-  position: absolute;
-  left: -30px;
-  right: -30px;
-  top: -30px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.window .primaryWindowHeading h2 {
-  margin: 0;
-}
-
-.window .primaryWindowHeading .headingButtons {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex: 0 0 auto;
-  width: auto;
-  height: auto;
-  min-width: 160px;
-  margin-left: auto;
-  margin-right: 40px;
-  gap: 8px;
-}
-
-.window .primaryWindowHeading .headingButtons .headingButton,
-.startMenuContent .socials .headingButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 24px;
-  position: relative;
-  border-radius: 5px;
-  transition: background-color var(--motion-time) ease;
-}
-
-.window .primaryWindowHeading .headingButtons .headingButton:hover,
-.window .primaryWindowHeading .headingButtons .headingButton:focus-visible,
-.startMenuContent .socials .headingButton:hover,
-.startMenuContent .socials .headingButton:focus-visible {
-  background: linear-gradient(115deg, var(--hover-color-1, var(--hover-color)) 0 50%, var(--hover-color-2, var(--hover-color)) 50% 100%);
-}
-
-.window .primaryWindowHeading .headingButtons .headingButton img,
-.startMenuContent .socials .headingButton img {
-  display: block;
+.navRight > a img,
+.dropbtn > img {
+  width: 18px;
   height: 18px;
-  padding: 2px;
-  transition: transform var(--motion-time) ease;
-  transform: scale(1.2);
-}
-
-.window .primaryWindowHeading .headingButtons .headingButton img:hover,
-.startMenuContent .socials .headingButton img:hover {
-  transition: transform var(--motion-time) ease;
-  transform: scale(1) rotate(-5deg);
-}
-
-.window .primaryWindowHeading .headingButtons .headingButton::after,
-.startMenuContent .socials .headingButton::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%) translateY(-4px) scale(0.96) rotate(5deg);
-  padding: 4px 8px;
-  background: #e8dcff;
-  color: #2b0040;
-  border: 1px solid #2b0040;
-  border-radius: 5px;
-  font-family: "Rubik";
-  font-size: 12px;
-  line-height: 1;
-  white-space: nowrap;
-  opacity: 0;
-  transition:
-    opacity var(--motion-time) ease,
-    transform var(--motion-time) ease;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.window .primaryWindowHeading .headingButtons .headingButton::before,
-.startMenuContent .socials .headingButton::before {
-  content: "";
-  position: absolute;
-  top: calc(100% + 2px);
-  left: 50%;
-  transform: translateX(-50%) translateY(-4px);
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #2b0040;
-  opacity: 0;
-  transition:
-    opacity var(--motion-time) ease,
-    transform var(--motion-time) ease;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.window .primaryWindowHeading .headingButtons .headingButton:hover::after,
-.window .primaryWindowHeading .headingButtons .headingButton:hover::before,
-.window .primaryWindowHeading .headingButtons .headingButton:focus-visible::after,
-.window .primaryWindowHeading .headingButtons .headingButton:focus-visible::before,
-.startMenuContent .socials .headingButton:hover::after,
-.startMenuContent .socials .headingButton:hover::before,
-.startMenuContent .socials .headingButton:focus-visible::after,
-.startMenuContent .socials .headingButton:focus-visible::before {
-  opacity: 1;
-}
-
-.window .primaryWindowHeading .headingButtons .headingButton:hover::after,
-.window .primaryWindowHeading .headingButtons .headingButton:focus-visible::after,
-.startMenuContent .socials .headingButton:hover::after,
-.startMenuContent .socials .headingButton:focus-visible::after {
-  transform: translateX(-50%) translateY(0) scale(1);
-}
-
-.window .primaryWindowHeading .headingButtons .headingButton:hover::before,
-.window .primaryWindowHeading .headingButtons .headingButton:focus-visible::before,
-.startMenuContent .socials .headingButton:hover::before,
-.startMenuContent .socials .headingButton:focus-visible::before {
-  transform: translateX(-50%) translateY(0);
-}
-
-.window .secondaryWindowHeading {
-  background: rgb(109, 43, 107);
-  padding: 0px 2px 2px 20px;
-  margin: 20px -30px 0px -30px;
-  box-sizing: border-box;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
-.content img {
   display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 16px 0 16px 0;
-  border-radius: 5px;
+  flex: 0 0 18px;
+  object-fit: contain;
 }
 
-.about {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  direction: ltr;
+.dropbtn > img {
+  margin-top: 1px;
 }
 
-.music {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  direction: ltr;
+nav img:hover,
+.heroTop img:hover {
+  transform: rotate(360deg);
 }
 
-.blog {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  direction: ltr;
-}
-
-@media (max-width: 1354px) {
-  .about,
-  .music,
-  .blog {
-    max-height: none;
-  }
+.smallIcon {
+  height: 35px;
+  image-rendering: pixelated;
 }
 
 .content {
-  box-sizing: border-box;
-  padding-top: 12px;
-  padding-right: 8px;
-  overflow-y: auto;
-  flex: 1 1 auto;
-  direction: ltr;
-  scrollbar-width: none; /* Firefox */
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-h4 {
+.blogLayout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 40px 50px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  font-size: 100px;
+  max-width: fit-content;
+  margin: 0;
+}
+
+.headingSS4 {
+  font-family: "ss4";
+}
+
+.headingTicketing {
   font-family: "Ticketing";
+  color: var(--accent);
+  transition: all 500ms ease;
 }
 
-.window code {
-  font-family: "JetBrains";
-  background-color: #1a0421;
+.headingTicketing:hover {
+  letter-spacing: 10px;
 }
 
-.item span {
-  text-shadow:
-    0 0 5px black,
-    0 0 5px black;
+.contentTicketing {
+  font-family: "Ticketing";
+  color: var(--accent);
+}
+
+.subheading {
+  font-size: 24px;
+  margin: 30px 0px -30px 0px;
+}
+
+.subheading a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  transition: all 200ms ease;
+  transform-origin: left center;
+}
+
+.subheading a:hover {
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+.aboutMe a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  transition: all 200ms ease;
+  transform-origin: left center;
+}
+
+.aboutMe a:hover {
+  text-decoration: underline;
+  letter-spacing: 2px;
 }
 
 .blogPostCard {
   font-family: "ss4";
-  background-color: #3a2441;
+  background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   margin-top: 20px;
   border-radius: 5px;
@@ -555,7 +325,7 @@ h4 {
   margin-top: 8px;
   font-family: "ss4";
   font-size: 0.95rem;
-  color: #b35aca;
+  color: var(--accent);
 }
 
 .blogPostCard h3,
@@ -568,135 +338,179 @@ h4 {
   display: inline-block;
   text-decoration: none;
   transition:
-    transform 200ms ease,
+    all 200ms ease,
     text-decoration-color 200ms ease;
   transform-origin: left center;
 }
 
 .blogPostCard a:hover {
   text-decoration: underline;
-  transform: scale(0.9);
+  letter-spacing: 2px;
 }
 
-/* HTML: <div class="loader"></div> */
-.loader {
-  width: 120px;
-  height: 20px;
-  mask: linear-gradient(90deg, #000 70%, #0000 0) 0/20%;
-  -webkit-mask: linear-gradient(90deg, #000 70%, #0000 0) 0/20%;
-  background: linear-gradient(#8a00b5 0 0) 0/0% no-repeat #4d0065;
-  animation: l4 1000ms infinite steps(6);
+.blogPosts {
+  flex: 1;
+  max-width: 700px;
 }
-@keyframes l4 {
-  100% {
-    background-size: 120%;
+
+hr {
+  border: 2px solid var(--accent);
+  border-radius: 2px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+code {
+  font-family: "JetBrains";
+}
+
+.content a {
+  color: var(--accent);
+  text-decoration: none;
+  transition:
+    all 200ms ease,
+    text-decoration-color 200ms ease;
+  transform-origin: left center;
+}
+
+.content a:hover {
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+.aboutMe h1 {
+  font-size: 2.4rem;
+  background-color: var(--panel);
+  padding: 5px 25px 5px 25px;
+  border-radius: 5px;
+}
+
+.aboutMe h1::before {
+  content: "#";
+  color: var(--accent);
+}
+
+.aboutMe h2 {
+  font-size: 1.9rem;
+  background-color: var(--panel);
+  padding: 5px 25px 5px 25px;
+  border-radius: 5px;
+}
+
+.aboutMe h2::before,
+.comments h2::before {
+  content: "##";
+  color: var(--accent);
+}
+
+.aboutMe h3 {
+  font-size: 1.5rem;
+  background-color: var(--panel);
+  padding: 5px 25px 5px 25px;
+  border-radius: 5px;
+}
+
+.aboutMe h3::before {
+  content: "###";
+  color: var(--accent);
+}
+
+.mainIcon {
+  color: white;
+}
+
+.mainIcon span {
+  color: white;
+}
+
+.mainIcon span:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+.scrollDown {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%) translateY(8px);
+  z-index: 9;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+  padding: 7px 12px 7px 12px;
+  border-radius: 5px;
+  background-color: var(--panel);
+  width: fit-content;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.scrollDown.scrollDown--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.heroTop h1 {
+  font-size: 500%;
+  margin: 0px;
+}
+
+.heroTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+  .heroTop {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }
 
-.loadingScreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  z-index: 9999;
-  opacity: 1;
-  transition:
-    opacity var(--motion-time) ease,
-    visibility var(--motion-time) ease;
+.heroTop img {
+  width: 200px;
+  height: 200px;
+  transition: all 0.7s ease;
 }
 
-.loadingScreen--hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.loadingScreen h1 {
-  font-family: "Ticketing";
-  color: white;
-}
-
-.loadingScreen h1 sup {
-  color: #d287e9;
-}
-
-.versionNumber {
-  font-family: "Ticketing";
-  color: white;
-}
-
-.startMenuContent .startMenuHeader sup {
-  color: #ecadff;
-}
-
-.startMenuContent .startMenuHeader img {
-  transition: transform 400ms ease;
-}
-
-.startMenuContent .startMenuHeader img:hover {
-  transform: rotate(360deg);
-}
-
-.startMenuContent .startMenuItems .largeStartMenuItem {
-  flex: 0 0 auto;
+.heroInfo {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 8px;
-  color: white;
-  font-family: "Ticketing";
-  background: rgb(109, 43, 107);
-  padding: 3px;
+  gap: 5px;
+  margin-bottom: 5px;
+  overflow-x: auto;
+}
+
+.heroBadge {
+  padding: 5px 10px 5px 10px;
   border-radius: 5px;
-  margin: 5px 0px 0px 0px;
+  background-color: var(--panel);
+  border: 2px solid var(--accent);
+  width: fit-content;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  transition: all 250ms;
 }
 
-.startMenuContent .startMenuItems .largeStartMenuItem img {
-  width: 24px;
+.heroBadge:hover {
+  letter-spacing: 2px;
 }
 
-.startMenuContent .startMenuItems .largeStartMenuItem:hover {
-  background: rgb(149, 58, 146);
-}
+/* ofc i had to call the 88x31s "ogbuttons" :/ */
 
-.startMenuContent .startMenuItems .largeStartMenuItem img {
-  transition: transform var(--motion-time) ease;
-}
-
-.startMenuContent .startMenuItems .largeStartMenuItem:hover img,
-.startMenuContent .startMenuItems .largeStartMenuItem:focus-visible img {
-  transform: scale(1.1) rotate(10deg);
-}
-
-.startMenuContent .startMenuItems .StartMenuitem img {
-  width: 24px;
-}
-
-.startMenuContent .startMenuItems .StartMenuitem:hover {
-  background: #643c7a;
-}
-
-.startMenuContent .startMenuItems .StartMenuitem img {
-  transition: transform var(--motion-time) ease;
-}
-
-.startMenuContent .startMenuItems .StartMenuitem:hover img,
-.startMenuContent .startMenuItems .StartMenuitem:focus-visible img {
-  transform: scale(1.1) rotate(10deg);
-}
-
-.webrings {
-  color: white;
-  font-family: "Ticketing";
-  margin-top: -20px;
-}
-
-.webrings a {
-  color: white;
+.ogbuttons img {
+  border-radius: 0px;
+  image-rendering: pixelated;
 }

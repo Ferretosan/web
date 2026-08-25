@@ -20,9 +20,16 @@
   src: url(/fonts/JetBrainsMono[wght].ttf);
 }
 
+:root {
+  --bg: #1c141e;
+  --panel: #3a2441;
+  --accent: #b35aca;
+  --text: #ffffff;
+}
+
 body {
-  background-color: #1c141e;
-  color: white;
+  background-color: var(--bg);
+  color: var(--text);
   font-family: "ss4";
   margin: 0;
 }
@@ -50,7 +57,7 @@ body {
 .headingTicketing {
   font-family: "Ticketing";
   margin-left: 10px;
-  color: #b35aca;
+  color: var(--accent);
 }
 
 .subheading {
@@ -75,7 +82,7 @@ body {
 
 .blogPostCard {
   font-family: "ss4";
-  background-color: #3a2441;
+  background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   margin-top: 20px;
   border-radius: 5px;
@@ -86,7 +93,7 @@ body {
   margin-top: 8px;
   font-family: "ss4";
   font-size: 0.95rem;
-  color: #b35aca;
+  color: var(--accent);
 }
 
 .blogPostCard h3,

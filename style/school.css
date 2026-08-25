@@ -1,0 +1,74 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Ticketing";
+  src: url(/fonts/basiic.ttf);
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "ss4";
+  src: url(/fonts/ss4.ttf);
+}
+
+@font-face {
+  font-family: "JetBrains";
+  src: url(/fonts/JetBrainsMono[wght].ttf);
+}
+
+body {
+  margin: 0;
+  background-color: #241f1f;
+  color: white;
+}
+
+.content {
+  max-width: 800px;
+  border: 2px dashed white;
+  margin: auto;
+  padding: 20px;
+  font-family: "ss4";
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+h1 {
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+h1 img {
+  width: 35px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+li img {
+  width: 20px;
+}
+
+ul a {
+  color: #e1c9c9;
+  text-decoration: none;
+}
+
+ul a:hover {
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+hr {
+  border: 1px solid #e1c9c9;
+  color: none;
+}
