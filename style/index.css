@@ -380,6 +380,15 @@ code {
   letter-spacing: 2px;
 }
 
+.aboutMe h1,
+.aboutMe h2,
+.aboutMe h3 {
+  font-family: "ss4";
+  line-height: 1;
+  margin: 2rem 0 1rem;
+  color: var(--accent-soft);
+}
+
 .aboutMe h1 {
   font-size: 2.4rem;
   background-color: var(--panel);
@@ -399,8 +408,7 @@ code {
   border-radius: 5px;
 }
 
-.aboutMe h2::before,
-.comments h2::before {
+.aboutMe h2::before {
   content: "##";
   color: var(--accent);
 }

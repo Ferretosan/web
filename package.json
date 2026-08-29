@@ -2,9 +2,9 @@
   "name": "ferretosan-web",
   "version": "1.0.0",
   "private": true,
-  "description": "Ferretosan's retro pixel art personal website",
+  "type": "module",
+  "description": "Ferretosan's home on the internet.",
   "scripts": {
-    "dev": "vite",
-    "preview": "vite preview"
+    "dev": "npx vite"
   }
 }
