@@ -1,0 +1,10 @@
+{
+  "name": "ferretosan-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ferretosan's retro pixel art personal website",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview"
+  }
+}

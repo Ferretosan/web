@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ferret's Corner - The Ferretosan Blog</title>
+    <link>https://ferretosan.com/</link>
+    <description>Ferretosan's blog - reflections of something or other, plus art and music.</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ferretosan.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>No, this is the coolest way to blog</title>
+      <link>https://ferretosan.com/blog/paperblog.html</link>
+      <guid>https://ferretosan.com/blog/paperblog.html</guid>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Writing blog posts is, in my opinion, one of the best ways to exercise your brain and get your opinion in the wild, while also learning how to build a website. But, being someone who already uses the computer far too much, makes it kind of negative. But, a simple notebook can change that.]]></description>
+    </item>
+    <item>
+      <title>Why I changed my website style</title>
+      <link>https://ferretosan.com/blog/newwebstyle.html</link>
+      <guid>https://ferretosan.com/blog/newwebstyle.html</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[If you're looking at my website right now, you'd probably either be wondering why my main page looks ... familiar or why my log page looks ... modern? classic? Well, we'll find out.]]></description>
+    </item>
+    <item>
+      <title>Blog Comments Using Utterances!</title>
+      <link>https://ferretosan.com/blog/utterances.html</link>
+      <guid>https://ferretosan.com/blog/utterances.html</guid>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Today I have accomplished something (with the help of a lil AI...) revolutionary. My blog posts have comments. But how could I accomplish such a thing in the age of corporate garbage infecting the popular solutions like Disqus? Well, with the help of Utterances.]]></description>
+    </item>
+    <item>
+      <title>Happy new years!</title>
+      <link>https://ferretosan.com/blog/newyear26.html</link>
+      <guid>https://ferretosan.com/blog/newyear26.html</guid>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Yup, it's the new year once again! The cycle shall continue. I hope everyone reading has had a great Christmas and has set (achievable) goals for the 2027th year since AD 0.]]></description>
+    </item>
+    <item>
+      <title>Why I changed my font</title>
+      <link>https://ferretosan.com/blog/font.html</link>
+      <guid>https://ferretosan.com/blog/font.html</guid>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[I changed my fonts... If you're thinking, what the hell is this talking about? He changed his fonts, WHO THE HELL CARES??!?!? Uh, good point. But, I think this deserves a blog post.]]></description>
+    </item>
+    <item>
+      <title>Why I use Aseprite</title>
+      <link>https://ferretosan.com/blog/aseprite.html</link>
+      <guid>https://ferretosan.com/blog/aseprite.html</guid>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Aesprite is one of those things that everybody says is really good and that you should buy, but I never did for a long time. This is because I used an app called Blockbench. Traditionally, it is a low-poly 3D modelling app, but it has a new pixel art mode, so I tried it out.]]></description>
+    </item>
+    <item>
+      <title>GOD I HATE CHROMEBOOKS</title>
+      <link>https://ferretosan.com/blog/chromebooks.html</link>
+      <guid>https://ferretosan.com/blog/chromebooks.html</guid>
+      <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[I hate Chromebooks. I mean, they're supposedly the fastest computer that can run chrome - yet fail to reasonably handle 2 tabs. (Google Docs, mind you) Never had a virus, marketing garbage - my friend proplayer919 made one in seconds.]]></description>
+    </item>
+    <item>
+      <title>The Debate - Java or Bedrock</title>
+      <link>https://ferretosan.com/blog/mcjob.html</link>
+      <guid>https://ferretosan.com/blog/mcjob.html</guid>
+      <pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate>
+      <description><![CDATA[So, do you choose Minecraft Java Edition or Minecraft Bedrock Edition? Well, there are reasons for both, and I'll cover why you might choose one or another. But, this might be a little bit biasted because I am a massive Java player on Prism.]]></description>
+    </item>
+  </channel>
+</rss>
