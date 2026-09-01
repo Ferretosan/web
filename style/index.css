@@ -328,6 +328,15 @@ nav img:hover,
   color: var(--accent);
 }
 
+.blogPostCard img {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
 .blogPostCard h3,
 h4 {
   font-family: "ss4";
@@ -380,47 +389,39 @@ code {
   letter-spacing: 2px;
 }
 
-.aboutMe h1,
-.aboutMe h2,
-.aboutMe h3 {
+.sectionHeading {
   font-family: "ss4";
   line-height: 1;
   margin: 2rem 0 1rem;
   color: var(--accent-soft);
-}
-
-.aboutMe h1 {
-  font-size: 2.4rem;
   background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   border-radius: 5px;
 }
 
-.aboutMe h1::before {
+.sectionHeading--h1 {
+  font-size: 2.4rem;
+}
+
+.sectionHeading--h1::before {
   content: "#";
   color: var(--accent);
 }
 
-.aboutMe h2 {
+.sectionHeading--h2 {
   font-size: 1.9rem;
-  background-color: var(--panel);
-  padding: 5px 25px 5px 25px;
-  border-radius: 5px;
 }
 
-.aboutMe h2::before {
+.sectionHeading--h2::before {
   content: "##";
   color: var(--accent);
 }
 
-.aboutMe h3 {
+.sectionHeading--h3 {
   font-size: 1.5rem;
-  background-color: var(--panel);
-  padding: 5px 25px 5px 25px;
-  border-radius: 5px;
 }
 
-.aboutMe h3::before {
+.sectionHeading--h3::before {
   content: "###";
   color: var(--accent);
 }
@@ -521,4 +522,12 @@ code {
 .ogbuttons img {
   border-radius: 0px;
   image-rendering: pixelated;
+}
+/* strip Kit form padding */
+.formkit-fields { padding: 0 !important; }
+
+/* strip Kit form spacing */
+.formkit-form .formkit-field,
+.formkit-form .formkit-submit {
+  margin-bottom: 0 !important;
 }

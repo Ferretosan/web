@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Ferretosan's home on the internet.",
   "scripts": {
-    "dev": "npx vite"
+    "dev": "npx vite",
+    "build:feed": "node build-feed.mjs > feed.xml"
   }
 }

@@ -191,6 +191,60 @@ article a:hover,
   letter-spacing: 2px;
 }
 
+article img {
+  display: block;
+  max-width: 65%;
+  max-height: 70vh;
+  height: auto;
+  width: auto;
+  margin: 1.5rem 0;
+  border: 3px solid var(--panel);
+  border-radius: 8px;
+}
+
+article img.postCover {
+  width: 100%;
+  max-width: 100%;
+  max-height: none;
+  margin-top: 0;
+}
+
+article img.pixelated {
+  image-rendering: pixelated;
+}
+
+.newsletter {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.newsletter h2 {
+  font-family: "ss4";
+  line-height: 1;
+  margin: 0 0 1rem;
+  color: var(--accent-soft);
+  font-size: 1.9rem;
+  background-color: var(--panel);
+  padding: 5px 25px 5px 25px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 100%;
+}
+
+.newsletter h2::before {
+  content: "##";
+  color: var(--accent);
+}
+
+.newsletter p {
+  font-family: "ss4";
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--accent-soft);
+  margin: 0 0 1rem;
+}
+
 .comments {
   margin-top: 3rem;
   padding-top: 2rem;
@@ -199,4 +253,10 @@ article a:hover,
 
 #utterances-container {
   min-height: 80px;
+}
+
+/* strip Kit form spacing */
+.formkit-form .formkit-field,
+.formkit-form .formkit-submit {
+  margin-bottom: 0 !important;
 }
