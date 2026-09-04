@@ -482,7 +482,8 @@ code {
 @media (max-width: 700px) {
   .heroTop {
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: left;
+    margin-left: 5%;
   }
 }
 

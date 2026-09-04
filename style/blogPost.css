@@ -229,7 +229,6 @@ article img.pixelated {
   padding: 5px 25px 5px 25px;
   border-radius: 5px;
   display: inline-block;
-  width: 100%;
 }
 
 .newsletter h2::before {
