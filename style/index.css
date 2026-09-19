@@ -12,7 +12,14 @@
 
 @font-face {
   font-family: "ss4";
+  font-style: normal;
   src: url(/fonts/ss4.ttf);
+}
+
+@font-face {
+  font-family: "ss4";
+  font-style: italic;
+  src: url(/fonts/ss4i.ttf);
 }
 
 @font-face {
@@ -39,6 +46,15 @@ body {
   margin: 0;
   padding: 10px;
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: italic;
 }
 
 /* Always Dark Mode Styles */
@@ -504,6 +520,10 @@ code {
 }
 
 .heroBadge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   background-color: var(--panel);
@@ -511,11 +531,13 @@ code {
   width: fit-content;
   flex: 0 0 auto;
   white-space: nowrap;
-  transition: all 250ms;
 }
 
-.heroBadge:hover {
-  letter-spacing: 2px;
+.heroBadge img {
+  width: 16px;
+  height: 16px;
+  border-radius: 0;
+  filter: brightness(0) invert(1);
 }
 
 /* ofc i had to call the 88x31s "ogbuttons" :/ */
@@ -525,10 +547,16 @@ code {
   image-rendering: pixelated;
 }
 /* strip Kit form padding */
-.formkit-fields { padding: 0 !important; }
+.formkit-fields {
+  padding: 0 !important;
+}
 
 /* strip Kit form spacing */
 .formkit-form .formkit-field,
 .formkit-form .formkit-submit {
   margin-bottom: 0 !important;
+}
+
+.circle {
+  border-radius: 100%;
 }

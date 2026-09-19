@@ -12,7 +12,14 @@
 
 @font-face {
   font-family: "ss4";
+  font-style: normal;
   src: url(/fonts/ss4.ttf);
+}
+
+@font-face {
+  font-family: "ss4";
+  font-style: italic;
+  src: url(/fonts/ss4i.ttf);
 }
 
 @font-face {
@@ -32,6 +39,15 @@ body {
   color: var(--text);
   font-family: "ss4";
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: italic;
 }
 
 .blogLayout {

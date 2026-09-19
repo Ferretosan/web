@@ -12,7 +12,14 @@
 
 @font-face {
   font-family: "ss4";
+  font-style: normal;
   src: url(/fonts/ss4.ttf);
+}
+
+@font-face {
+  font-family: "ss4";
+  font-style: italic;
+  src: url(/fonts/ss4i.ttf);
 }
 
 @font-face {
@@ -34,6 +41,15 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: "ss4";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: italic;
 }
 
 .postPage {
@@ -228,7 +244,6 @@ article img.pixelated {
   background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   border-radius: 5px;
-  display: inline-block;
 }
 
 .newsletter h2::before {
