@@ -517,6 +517,7 @@ code {
   gap: 5px;
   margin-bottom: 5px;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
 }
 
 .heroBadge {

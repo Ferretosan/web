@@ -13,25 +13,37 @@ window.addEventListener("DOMContentLoaded", () => {
 		row.addEventListener(
 			"wheel",
 			(event) => {
-				if (event.deltaY === 0) {
-					return;
-				}
-
 				const maxScrollLeft = row.scrollWidth - row.clientWidth;
 				if (maxScrollLeft <= 0) {
 					return;
 				}
 
-				const scrollingRight = event.deltaY > 0;
-				const canScrollRight = row.scrollLeft < maxScrollLeft;
-				const canScrollLeft = row.scrollLeft > 0;
+				const isHorizontalGesture = Math.abs(event.deltaX) > Math.abs(event.deltaY);
+				const horizontalDelta = event.deltaX + event.deltaY;
 
-				if ((scrollingRight && !canScrollRight) || (!scrollingRight && !canScrollLeft)) {
+				if (horizontalDelta === 0) {
 					return;
 				}
 
-				event.preventDefault();
-				row.scrollBy({ left: event.deltaY, top: 0 });
+				const scrollingRight = horizontalDelta > 0;
+				const atRightEdge = row.scrollLeft >= maxScrollLeft;
+				const atLeftEdge = row.scrollLeft <= 0;
+
+				if (isHorizontalGesture) {
+					// Trackpad horizontal swipe: absorb it so the gesture never
+					// chains to the page and scrolls/bounces weirdly.
+					// scrollBy clamps to the edges.
+					event.preventDefault();
+					row.scrollBy({ left: horizontalDelta, top: 0 });
+				} else if (
+					(scrollingRight && !atRightEdge) ||
+					(!scrollingRight && !atLeftEdge)
+				) {
+					// Mouse wheel: convert vertical scroll into horizontal
+					// scrolling, but let the page take over at the edges.
+					event.preventDefault();
+					row.scrollBy({ left: horizontalDelta, top: 0 });
+				}
 			},
 			{ passive: false }
 		);
