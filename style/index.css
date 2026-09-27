@@ -561,3 +561,290 @@ code {
 .circle {
   border-radius: 100%;
 }
+
+/* ------------------------------------------------------------------ */
+/* Art page                                                            */
+/* ------------------------------------------------------------------ */
+
+body.page-art {
+  text-align: center;
+}
+
+.page-art .hero {
+  min-height: 0;
+  text-align: center;
+}
+
+.page-art .heading {
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.2em;
+  margin: 0 auto;
+  font-size: min(100px, 13vw);
+}
+
+.page-art .content {
+  max-width: none;
+  margin: 0;
+}
+
+.page-art .hero a {
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-block;
+  transform-origin: left center;
+  transition:
+    all 200ms ease,
+    text-decoration-color 200ms ease;
+}
+
+.page-art .hero a:hover {
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+.page-art h2 {
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.page-art .grid {
+  --masonry-min-col: 260px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.page-art .masonry-column {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.page-art .item {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+  border-radius: 5px;
+}
+
+.page-art .photo-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 20, 30, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.page-art .photo-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page-art .photo-overlay img {
+  max-width: min(90vw, 1200px);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.page-art .download-btn {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  padding: 10px 20px;
+  background-color: var(--panel);
+  color: var(--text);
+  border: 2px solid var(--accent);
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "ss4";
+  font-size: 14px;
+  transition: all 200ms ease;
+  transform-origin: center;
+}
+
+.page-art .download-btn:hover {
+  background-color: var(--panel-alt);
+  letter-spacing: 1px;
+}
+
+/* HTML: <div class="loader"></div> */
+.page-art .loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: var(--accent-bright);
+  animation: l15 1s infinite linear;
+  position: absolute;
+  margin-top: -50px;
+  left: 50%;
+  top: 50%;
+}
+.page-art .loader::before,
+.page-art .loader::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+.page-art .loader::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+@keyframes l15 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.page-art .loaderBox {
+  background-color: var(--bg);
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+/* ------------------------------------------------------------------ */
+/* Music page                                                          */
+/* ------------------------------------------------------------------ */
+
+body.page-music {
+  text-align: center;
+}
+
+.page-music h1 {
+  font-family: "ss4";
+  font-size: min(70px, 11vw);
+  font-style: normal;
+}
+
+.page-music h3 {
+  font-family: "Ticketing";
+  font-size: 35px;
+}
+
+.newSingle {
+  background-color: var(--panel);
+  color: var(--text);
+  padding: 16px;
+  margin: 32px auto;
+  max-width: 700px;
+  border-radius: 5px;
+}
+
+.newSingle h3 {
+  margin: 0 0 16px;
+}
+
+.musicServices {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px auto 0;
+}
+
+.musicServices .headingButton.small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-decoration: none;
+  background-color: var(--panel);
+  border: 2px solid var(--accent);
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+.musicServices .headingButton.small:hover,
+.musicServices .headingButton.small:focus-visible {
+  background-color: var(--panel-alt);
+  transform: scale(1.1);
+}
+
+.musicServices .headingButton.small img {
+  display: block;
+  height: 24px;
+  width: auto;
+}
+
+.backToFerretsCorner a {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  transition:
+    all 200ms ease,
+    text-decoration-color 200ms ease;
+  transform-origin: left center;
+}
+
+.backToFerretsCorner a:hover {
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* School page                                                         */
+/* ------------------------------------------------------------------ */
+
+.page-school .content {
+  max-width: 800px;
+  margin: 20px auto 0;
+  padding: 20px;
+  font-family: "ss4";
+  background-color: var(--panel);
+  border-radius: 5px;
+}
+
+.page-school h1 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.page-school h1 img {
+  width: 35px;
+}
+
+.page-school li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.page-school li img {
+  width: 20px;
+}
+
+.page-school ul a {
+  color: var(--text);
+  text-decoration: none;
+  display: inline-block;
+  transition:
+    all 200ms ease,
+    text-decoration-color 200ms ease;
+  transform-origin: left center;
+}
+
+.page-school ul a:hover {
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
