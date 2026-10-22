@@ -126,7 +126,7 @@ h6 {
 
 .backLink:hover {
   text-decoration: underline;
-  letter-spacing: 2px;
+  transform: scale(0.9);
 }
 
 article p {
@@ -204,7 +204,7 @@ article a:hover,
 .comments a:hover {
   color: var(--accent-bright);
   text-decoration: underline;
-  letter-spacing: 2px;
+  transform: scale(0.9);
 }
 
 article img {

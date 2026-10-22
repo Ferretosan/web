@@ -312,7 +312,7 @@ nav img:hover,
 
 .subheading a:hover {
   text-decoration: underline;
-  letter-spacing: 2px;
+  transform: scale(0.9);
 }
 
 .aboutMe a {
@@ -325,7 +325,7 @@ nav img:hover,
 
 .aboutMe a:hover {
   text-decoration: underline;
-  letter-spacing: 2px;
+  transform: scale(0.9);
 }
 
 .blogPostCard {
@@ -370,7 +370,7 @@ h4 {
 
 .blogPostCard a:hover {
   text-decoration: underline;
-  letter-spacing: 2px;
+  transform: scale(0.9);
 }
 
 .blogPosts {
@@ -402,7 +402,7 @@ code {
 
 .content a:hover {
   text-decoration: underline;
-  letter-spacing: 2px;
+  transform: scale(0.9);
 }
 
 .sectionHeading {
@@ -413,6 +413,11 @@ code {
   background-color: var(--panel);
   padding: 5px 25px 5px 25px;
   border-radius: 5px;
+}
+
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 .sectionHeading--h1 {
@@ -546,7 +551,20 @@ code {
 .ogbuttons img {
   border-radius: 0px;
   image-rendering: pixelated;
+  transform-origin: center;
 }
+
+.ogbuttons img:hover {
+  transform-origin: center;
+}
+
+/* the hover scale is applied to the wrapping <a>, so centre the origin there */
+.aboutMe .ogbuttons a,
+.aboutMe .ogbuttons a:hover {
+  transform-origin: center;
+  line-height: 0;
+}
+
 /* strip Kit form padding */
 .formkit-fields {
   padding: 0 !important;
@@ -560,6 +578,51 @@ code {
 
 .circle {
   border-radius: 100%;
+}
+
+.block {
+  font-family: "ss4";
+  background-color: var(--panel);
+  padding: 5px 25px 5px 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.block h3,
+.block h4 {
+  font-family: "ss4";
+}
+
+.block a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  transition:
+    all 200ms ease,
+    text-decoration-color 200ms ease;
+  transform-origin: left center;
+}
+
+.block a:hover {
+  text-decoration: underline;
+  transform: scale(0.9);
+}
+
+.block pre {
+  background-color: var(--bg);
+  border-radius: 5px;
+  padding: 10px 12px;
+  margin: 10px 0;
+}
+
+.buttonPreview {
+  width: 264px;
+  height: 93px;
+  image-rendering: pixelated;
+}
+
+.block .ogbuttons a img {
+  width: 176;
 }
 
 /* ------------------------------------------------------------------ */
@@ -601,7 +664,7 @@ body.page-art {
 
 .page-art .hero a:hover {
   text-decoration: underline;
-  letter-spacing: 2px;
+  transform: scale(0.9);
 }
 
 .page-art h2 {
@@ -676,7 +739,7 @@ body.page-art {
 
 .page-art .download-btn:hover {
   background-color: var(--panel-alt);
-  letter-spacing: 1px;
+  transform: scale(0.9);
 }
 
 /* HTML: <div class="loader"></div> */
@@ -798,7 +861,7 @@ body.page-music {
 
 .backToFerretsCorner a:hover {
   text-decoration: underline;
-  letter-spacing: 2px;
+  transform: scale(0.9);
 }
 
 /* ------------------------------------------------------------------ */
@@ -846,5 +909,5 @@ body.page-music {
 
 .page-school ul a:hover {
   text-decoration: underline;
-  letter-spacing: 2px;
+  transform: scale(0.9);
 }
