@@ -6,6 +6,7 @@
   "description": "Ferretosan's home on the internet.",
   "scripts": {
     "dev": "npx vite",
-    "build:feed": "node build-feed.mjs > feed.xml"
+    "build:feed": "node build-feed.mjs > feed.xml",
+    "build:sitemap": "node build-sitemap.mjs > sitemap.xml"
   }
 }

@@ -114,8 +114,12 @@
       <title>Why I changed my website style</title>
       <link>https://ferretosan.com/blog/newwebstyle.html</link>
       <guid>https://ferretosan.com/blog/newwebstyle.html</guid>
+      <enclosure url="https://ferretosan.com/img/blog/newwebstyle/cover.png" length="600442" type="image/jpeg" />
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[<p>If you're looking at my website right now, you'd probably either be wondering why my main page looks ... familiar or why my blog page looks ... modern? classic? Well, we'll find out.</p>
+      <description><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/newwebstyle/cover.png" alt="Image representing the change in style of the website, with two images and an arrow in the middle." loading="lazy" />
+        <p>If you're looking at my website right now, you'd probably either be wondering why my main page looks ... familiar or why my blog page looks ... modern? classic? Well, we'll find out.</p>
+
+        <img src="https://ferretosan.com/img/blog/newwebstyle/new.png" alt="Screenshot of version 10 of my website, Ferret's Corner." loading="lazy" />
 
         <h1>The First Flaw</h1>
 
@@ -126,6 +130,8 @@
         <h1>But why a complete redesign?</h1>
 
         <p>Well, I'm going to be 100% honest. My old layout was vibe-coded, like not completely, but that was a big part of the development process. This meant I had no ability to make major (or minor tbh) updates easily. I relied on AI to make my website function.</p>
+
+        <img src="https://ferretosan.com/img/blog/newwebstyle/old.png" alt="A screenshot of version 9 of my website." loading="lazy" />
 
         <p>This wasn't the only reason, however. I've been getting tired of how generic it was looking, and how annoying it was to scroll down to everything. I didn't actually intend for a Windows Xp style, even. I actually just wanted some icons on the left for my main three things, and to have a bar at the bottom for my side-projects. (Yea, I renamed it from "The Hub")</p>
 
@@ -141,14 +147,21 @@
 
         <p>You probably are wondering about my art (digital art, photos and pixel art) and music pages. How would I organise those. The answer is simple. I would just experiment. As of writing this post, I have tons of creative ideas running through my veins. My idea for the music page is kinda simple, just having the Bandcamp emebeds stacked in a collumn.</p>
 
+        <img src="https://ferretosan.com/img/blog/newwebstyle/music.png" alt="A screenshot of version 9 of my website." loading="lazy" />
+
         <p>My idea for the art page is actually kinda cool. I plan to have the images floating around in the background, with the sections of art in nice bento grid, with the sections on a sidebar on the left.</p>
+
+        <img src="https://ferretosan.com/img/blog/newwebstyle/art.png" alt="A screenshot of version 9 of my website." loading="lazy" />
 
         <h1>Conclusion</h1>
 
         <p>Anyways, thanks for listening to/reading my yap.</p>
 
         <p>じゃね!<br />(Cya!)</p>]]></description>
-      <content:encoded><![CDATA[<p>If you're looking at my website right now, you'd probably either be wondering why my main page looks ... familiar or why my blog page looks ... modern? classic? Well, we'll find out.</p>
+      <content:encoded><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/newwebstyle/cover.png" alt="Image representing the change in style of the website, with two images and an arrow in the middle." loading="lazy" />
+        <p>If you're looking at my website right now, you'd probably either be wondering why my main page looks ... familiar or why my blog page looks ... modern? classic? Well, we'll find out.</p>
+
+        <img src="https://ferretosan.com/img/blog/newwebstyle/new.png" alt="Screenshot of version 10 of my website, Ferret's Corner." loading="lazy" />
 
         <h1>The First Flaw</h1>
 
@@ -159,6 +172,8 @@
         <h1>But why a complete redesign?</h1>
 
         <p>Well, I'm going to be 100% honest. My old layout was vibe-coded, like not completely, but that was a big part of the development process. This meant I had no ability to make major (or minor tbh) updates easily. I relied on AI to make my website function.</p>
+
+        <img src="https://ferretosan.com/img/blog/newwebstyle/old.png" alt="A screenshot of version 9 of my website." loading="lazy" />
 
         <p>This wasn't the only reason, however. I've been getting tired of how generic it was looking, and how annoying it was to scroll down to everything. I didn't actually intend for a Windows Xp style, even. I actually just wanted some icons on the left for my main three things, and to have a bar at the bottom for my side-projects. (Yea, I renamed it from "The Hub")</p>
 
@@ -174,7 +189,11 @@
 
         <p>You probably are wondering about my art (digital art, photos and pixel art) and music pages. How would I organise those. The answer is simple. I would just experiment. As of writing this post, I have tons of creative ideas running through my veins. My idea for the music page is kinda simple, just having the Bandcamp emebeds stacked in a collumn.</p>
 
+        <img src="https://ferretosan.com/img/blog/newwebstyle/music.png" alt="A screenshot of version 9 of my website." loading="lazy" />
+
         <p>My idea for the art page is actually kinda cool. I plan to have the images floating around in the background, with the sections of art in nice bento grid, with the sections on a sidebar on the left.</p>
+
+        <img src="https://ferretosan.com/img/blog/newwebstyle/art.png" alt="A screenshot of version 9 of my website." loading="lazy" />
 
         <h1>Conclusion</h1>
 
@@ -186,8 +205,10 @@
       <title>Blog Comments Using Utterances!</title>
       <link>https://ferretosan.com/blog/utterances.html</link>
       <guid>https://ferretosan.com/blog/utterances.html</guid>
+      <enclosure url="https://ferretosan.com/img/blog/utterances/cover.png" length="102907" type="image/jpeg" />
       <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[<p>Hello ladies and gentlemen, pet rocks and tungsten cubes.</p>
+      <description><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/utterances/cover.png" alt="A screenshot of an Utterances comment section, surrounded with comment bubbles." loading="lazy" />
+        <p>Hello ladies and gentlemen, pet rocks and tungsten cubes.</p>
 
         <h1>Introduction</h1>
         <p>Today I have accomplished something (with the help of a lil AI...) revolutionary. My blog posts have comments. But how could I accomplish such a thing in the age of corporate garbage infecting the popular solutions like Disqus? Well, with the help of Utterances.</p>
@@ -205,7 +226,8 @@
 
         <hr />
         <p>Check out Utterances at: <a href="https://utteranc.es">utteranc.es</a></p>]]></description>
-      <content:encoded><![CDATA[<p>Hello ladies and gentlemen, pet rocks and tungsten cubes.</p>
+      <content:encoded><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/utterances/cover.png" alt="A screenshot of an Utterances comment section, surrounded with comment bubbles." loading="lazy" />
+        <p>Hello ladies and gentlemen, pet rocks and tungsten cubes.</p>
 
         <h1>Introduction</h1>
         <p>Today I have accomplished something (with the help of a lil AI...) revolutionary. My blog posts have comments. But how could I accomplish such a thing in the age of corporate garbage infecting the popular solutions like Disqus? Well, with the help of Utterances.</p>
@@ -258,8 +280,9 @@
       <title>Why I changed my font</title>
       <link>https://ferretosan.com/blog/font.html</link>
       <guid>https://ferretosan.com/blog/font.html</guid>
+      <enclosure url="https://ferretosan.com/img/blog/font/cover.png" length="357650" type="image/jpeg" />
       <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <description><![CDATA[<h1>Why I changed my font</h1>
+      <description><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/font/cover.png" alt="An image depicting a change in fonts with Ticketing on the left, an arrow in the middle, and Source Serif 4, Rubik and Ticketing on the right." loading="lazy" />
         <p>こんにちは！ (Hello!)</p>
 
         <h1>The new fonts (AAAAAA)</h1>
@@ -290,7 +313,7 @@
 
         <hr />
         <p>じゃあね！<br />(Bye!)</p>]]></description>
-      <content:encoded><![CDATA[<h1>Why I changed my font</h1>
+      <content:encoded><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/font/cover.png" alt="An image depicting a change in fonts with Ticketing on the left, an arrow in the middle, and Source Serif 4, Rubik and Ticketing on the right." loading="lazy" />
         <p>こんにちは！ (Hello!)</p>
 
         <h1>The new fonts (AAAAAA)</h1>
@@ -326,9 +349,12 @@
       <title>Why I use Aseprite</title>
       <link>https://ferretosan.com/blog/aseprite.html</link>
       <guid>https://ferretosan.com/blog/aseprite.html</guid>
+      <enclosure url="https://ferretosan.com/img/blog/aseprite/cover.png" length="595820" type="image/jpeg" />
       <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
-      <description><![CDATA[<h1>Why I use Aseprite</h1>
+      <description><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/aseprite/cover.png" alt="Image representing the change in Pixel art editors, with Aseprite on one side, Blockbench on the other and an arrow in the middle." loading="lazy" />
         <p>Aesprite is one of those things that everybody says is really good and that you should buy, but I never did for a long time. This is because I used an app called Blockbench. Traditionally, it is a low-poly 3D modelling app, but it has a new pixel art mode, so I tried it out.</p>
+
+        <img src="https://ferretosan.com/img/blog/aseprite/blockbench.png" alt="Screenshot of the Blockbench image (pixel art) editor." loading="lazy" />
 
         <p>It was actually okay! And, I made some pretty cool things. Until then, I had to create around 30 sprites for a game (Rainycards) - but, we all know that it never got released. It was so hard to do even basic stuff, so I stopped making pixel art.</p>
 
@@ -337,12 +363,16 @@
         <p>However, when I saved it, it didn't save the layers, it was just a basic, flat, PNG file. And, I didn't want the swords the swords on the logo anymore. So, I decided to research pixel art apps.</p>
 
         <p>I've heard of Aseprite before and before, so it was my first idea when I needed a new one. And, my friend proplayer919 had it - it seemed like the greatest deal. I checked the price and it was 30 dollars. That was actually quite a bit of money for something that I can get for free.</p>
+
+        <img src="https://ferretosan.com/img/blog/aseprite/aseprite.png" alt="Screenshot of the Aseprite editor." loading="lazy" />
 
         <p>But, alas, I bought Aseprite - and that's where I am today.</p>
 
         <p>Yes ikik little blog post womp womp</p>]]></description>
-      <content:encoded><![CDATA[<h1>Why I use Aseprite</h1>
+      <content:encoded><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/aseprite/cover.png" alt="Image representing the change in Pixel art editors, with Aseprite on one side, Blockbench on the other and an arrow in the middle." loading="lazy" />
         <p>Aesprite is one of those things that everybody says is really good and that you should buy, but I never did for a long time. This is because I used an app called Blockbench. Traditionally, it is a low-poly 3D modelling app, but it has a new pixel art mode, so I tried it out.</p>
+
+        <img src="https://ferretosan.com/img/blog/aseprite/blockbench.png" alt="Screenshot of the Blockbench image (pixel art) editor." loading="lazy" />
 
         <p>It was actually okay! And, I made some pretty cool things. Until then, I had to create around 30 sprites for a game (Rainycards) - but, we all know that it never got released. It was so hard to do even basic stuff, so I stopped making pixel art.</p>
 
@@ -351,6 +381,8 @@
         <p>However, when I saved it, it didn't save the layers, it was just a basic, flat, PNG file. And, I didn't want the swords the swords on the logo anymore. So, I decided to research pixel art apps.</p>
 
         <p>I've heard of Aseprite before and before, so it was my first idea when I needed a new one. And, my friend proplayer919 had it - it seemed like the greatest deal. I checked the price and it was 30 dollars. That was actually quite a bit of money for something that I can get for free.</p>
+
+        <img src="https://ferretosan.com/img/blog/aseprite/aseprite.png" alt="Screenshot of the Aseprite editor." loading="lazy" />
 
         <p>But, alas, I bought Aseprite - and that's where I am today.</p>
 
@@ -360,21 +392,23 @@
       <title>GOD I HATE CHROMEBOOKS</title>
       <link>https://ferretosan.com/blog/chromebooks.html</link>
       <guid>https://ferretosan.com/blog/chromebooks.html</guid>
+      <enclosure url="https://ferretosan.com/img/blog/chromebooks/cover.png" length="85350" type="image/jpeg" />
       <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate>
-      <description><![CDATA[<h1>Introduction</h1>
+      <description><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/chromebooks/cover.png" alt="The Chromebook logo, with handwritten text changing it to: Chromebooks suck!" loading="lazy" />
+        <h1>Introduction</h1>
         <p>I hate Chromebooks. I mean, they're supposedly the fastest computer that can run chrome - yet fail to reasonably handle 2 tabs. (Google Docs, mind you) Never had a virus, marketing garbage - my friend proplayer919 made one in seconds.</p>
         <p>Today I'm going to cover why I absolutely hate Chromebooks, and what could redeem them.</p>
 
         <h1>Why I hate them</h1>
         <p>Chromebooks may seem like some amazing things that will let you browse the web with ease. Let me tell you a funny story.</p>
-        <p>I had to do a science project and I needed to have an encyvlopedia and Google Docs open. I opened my Google Docs thing, and it was already starting to lag with nothing else open. I opened the encyclopedia, and ... nothing happened when I moved the mouse. I managed to actively crash a Chromebook with 2 tabs.</p>
+        <p>I had to do a science project and I needed to have an encyclopedia and Google Docs open. I opened my Google Docs thing, and it was already starting to lag with nothing else open. I opened the encyclopedia, and ... nothing happened when I moved the mouse. I managed to actively crash a Chromebook with 2 tabs.</p>
 
         <h2>Lightning round</h2>
         <p>Number 1. There's good Chromebooks ... that are garbage. Even the so-called good chromebooks with like 8gb ram and a decent processor fail to run YouTube and Google Docs. A good analogy ChatGPT gave me is that's a digital whack-a-mole. To be honest, very true.</p>
         <p>Number 2. Everything is web-based, and nothing runs. I can't open anything if I don't have internet, and if I do I can't open even the most basic of apps because it's not designed in pure HTML/CSS/JS.</p>
-        <p>Number 3. They're not even good to use at this point. They used to have a niche - being okay for some basic web browing and then you got out your actual computer for anything else. But, with more schools adopting them for literally everything, you can't do lots of work. Just, staight up.</p>
+        <p>Number 3. They're not even good to use at this point. They used to have a niche - being okay for some basic web browsing and then you got out your actual computer for anything else. But, with more schools adopting them for literally everything, you can't do lots of work. Just, straight up.</p>
         <p>Now, they do have a purpose.</p>
-        <p>Because they're only web-based, you can really lock them down. If you have a test ... on Google Forms for some reason ... you can make it so you can't open any tabs or anything like that. But, then most tests are with Janison Replay (at least from my Australian experience) and you just loig out and click Janison and it's more locked down fully.</p>
+        <p>Because they're only web-based, you can really lock them down. If you have a test ... on Google Forms for some reason ... you can make it so you can't open any tabs or anything like that. But, then most tests are with Janison Replay (at least from my Australian experience) and you just log out and click Janison and it's more locked down fully.</p>
 
         <h1>They tried to redeem themselves...</h1>
         <p>...and failed.</p>
@@ -383,26 +417,28 @@
         <p>"Offline". They are offline for as long as I can drink tea. That's 2 minutes by the way. I dare you to attemp to edit a Google Doc while on a train or a plane without internet. Google Docs will crash, and then ask you to go online. Maybe you spent too long on an offline doc? Yeah, no. Using a Chromebook offline is as reliable as giving a child your bank account. They will spend all your money buying ice-cream. For Chromebooks, they spend your time saying it's offline only to crash and for you to lose all your work.</p>
 
         <h1>What redeems them</h1>
-        <p>Chromebooks are good controled enviroments. Lockdown for tests, as a kiosk, or using them in libraries where to bo honest nobody is productive anyways. For anything else, you're better of with even a Raspberry Pi.</p>
+        <p>Chromebooks are good controlled environments. Lockdown for tests, as a kiosk, or using them in libraries where to be honest nobody is productive anyways. For anything else, you're better off with even a Raspberry Pi.</p>
 
         <h1>In conclusion...</h1>
-        <p>...they work. Barely. Another good think that ChatGPT said is that Chromebooks are what happens when you make a laptop out of anxiety and glue. I like that. I bet a Chromebook would explode if you had over 10 tabs open. If you want to do anything else that isn't just clicking around on websites. Get a real computer. Even a beat-up ThinkPad will give you a better time.</p>
-        <p><strong>TL;DR</strong></p>
+        <p>...they work. Barely. Another good thing that ChatGPT said is that Chromebooks are what happens when you make a laptop out of anxiety and glue. I like that. I bet a Chromebook would explode if you had over 10 tabs open. If you want to do anything else that isn't just clicking around on websites. Get a real computer. Even a beat-up ThinkPad will give you a better time.</p>
+
+        <h1>TL;DR</h1>
         <p>Don't use a Chromebook.</p>]]></description>
-      <content:encoded><![CDATA[<h1>Introduction</h1>
+      <content:encoded><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/chromebooks/cover.png" alt="The Chromebook logo, with handwritten text changing it to: Chromebooks suck!" loading="lazy" />
+        <h1>Introduction</h1>
         <p>I hate Chromebooks. I mean, they're supposedly the fastest computer that can run chrome - yet fail to reasonably handle 2 tabs. (Google Docs, mind you) Never had a virus, marketing garbage - my friend proplayer919 made one in seconds.</p>
         <p>Today I'm going to cover why I absolutely hate Chromebooks, and what could redeem them.</p>
 
         <h1>Why I hate them</h1>
         <p>Chromebooks may seem like some amazing things that will let you browse the web with ease. Let me tell you a funny story.</p>
-        <p>I had to do a science project and I needed to have an encyvlopedia and Google Docs open. I opened my Google Docs thing, and it was already starting to lag with nothing else open. I opened the encyclopedia, and ... nothing happened when I moved the mouse. I managed to actively crash a Chromebook with 2 tabs.</p>
+        <p>I had to do a science project and I needed to have an encyclopedia and Google Docs open. I opened my Google Docs thing, and it was already starting to lag with nothing else open. I opened the encyclopedia, and ... nothing happened when I moved the mouse. I managed to actively crash a Chromebook with 2 tabs.</p>
 
         <h2>Lightning round</h2>
         <p>Number 1. There's good Chromebooks ... that are garbage. Even the so-called good chromebooks with like 8gb ram and a decent processor fail to run YouTube and Google Docs. A good analogy ChatGPT gave me is that's a digital whack-a-mole. To be honest, very true.</p>
         <p>Number 2. Everything is web-based, and nothing runs. I can't open anything if I don't have internet, and if I do I can't open even the most basic of apps because it's not designed in pure HTML/CSS/JS.</p>
-        <p>Number 3. They're not even good to use at this point. They used to have a niche - being okay for some basic web browing and then you got out your actual computer for anything else. But, with more schools adopting them for literally everything, you can't do lots of work. Just, staight up.</p>
+        <p>Number 3. They're not even good to use at this point. They used to have a niche - being okay for some basic web browsing and then you got out your actual computer for anything else. But, with more schools adopting them for literally everything, you can't do lots of work. Just, straight up.</p>
         <p>Now, they do have a purpose.</p>
-        <p>Because they're only web-based, you can really lock them down. If you have a test ... on Google Forms for some reason ... you can make it so you can't open any tabs or anything like that. But, then most tests are with Janison Replay (at least from my Australian experience) and you just loig out and click Janison and it's more locked down fully.</p>
+        <p>Because they're only web-based, you can really lock them down. If you have a test ... on Google Forms for some reason ... you can make it so you can't open any tabs or anything like that. But, then most tests are with Janison Replay (at least from my Australian experience) and you just log out and click Janison and it's more locked down fully.</p>
 
         <h1>They tried to redeem themselves...</h1>
         <p>...and failed.</p>
@@ -411,19 +447,22 @@
         <p>"Offline". They are offline for as long as I can drink tea. That's 2 minutes by the way. I dare you to attemp to edit a Google Doc while on a train or a plane without internet. Google Docs will crash, and then ask you to go online. Maybe you spent too long on an offline doc? Yeah, no. Using a Chromebook offline is as reliable as giving a child your bank account. They will spend all your money buying ice-cream. For Chromebooks, they spend your time saying it's offline only to crash and for you to lose all your work.</p>
 
         <h1>What redeems them</h1>
-        <p>Chromebooks are good controled enviroments. Lockdown for tests, as a kiosk, or using them in libraries where to bo honest nobody is productive anyways. For anything else, you're better of with even a Raspberry Pi.</p>
+        <p>Chromebooks are good controlled environments. Lockdown for tests, as a kiosk, or using them in libraries where to be honest nobody is productive anyways. For anything else, you're better off with even a Raspberry Pi.</p>
 
         <h1>In conclusion...</h1>
-        <p>...they work. Barely. Another good think that ChatGPT said is that Chromebooks are what happens when you make a laptop out of anxiety and glue. I like that. I bet a Chromebook would explode if you had over 10 tabs open. If you want to do anything else that isn't just clicking around on websites. Get a real computer. Even a beat-up ThinkPad will give you a better time.</p>
-        <p><strong>TL;DR</strong></p>
+        <p>...they work. Barely. Another good thing that ChatGPT said is that Chromebooks are what happens when you make a laptop out of anxiety and glue. I like that. I bet a Chromebook would explode if you had over 10 tabs open. If you want to do anything else that isn't just clicking around on websites. Get a real computer. Even a beat-up ThinkPad will give you a better time.</p>
+
+        <h1>TL;DR</h1>
         <p>Don't use a Chromebook.</p>]]></content:encoded>
     </item>
     <item>
       <title>The Debate - Java or Bedrock</title>
       <link>https://ferretosan.com/blog/mcjob.html</link>
       <guid>https://ferretosan.com/blog/mcjob.html</guid>
+      <enclosure url="https://ferretosan.com/img/blog/mcjob/cover.png" length="5668559" type="image/jpeg" />
       <pubDate>Wed, 16 Oct 2024 00:00:00 +0000</pubDate>
-      <description><![CDATA[<h1>Introduction</h1>
+      <description><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/mcjob/cover.png" alt="A screenshot in 26.2 Minecraft picturing a small island in the middle, with cherry groves surrounding it." loading="lazy" />
+        <h1>Introduction</h1>
         <p>So, do you choose Minecraft Java Edition or Minecraft Bedrock Edition? Well, there are reasons for both, and I'll cover why you might choose one or another. But, this might be a little bit biased because I am a massive Java player on Prism.</p>
 
         <h1>Bedrock Edition</h1>
@@ -440,7 +479,8 @@
 
         <h1>TL;DR</h1>
         <p>If you want a quick experience to play with friends, then Bedrock is probably the safest option. Though if you want a more fun and enjoyable experience, then Java is definitely the best option - in fact I think that Java is the best for everyone, with a nice modpack.</p>]]></description>
-      <content:encoded><![CDATA[<h1>Introduction</h1>
+      <content:encoded><![CDATA[<img class="postCover" src="https://ferretosan.com/img/blog/mcjob/cover.png" alt="A screenshot in 26.2 Minecraft picturing a small island in the middle, with cherry groves surrounding it." loading="lazy" />
+        <h1>Introduction</h1>
         <p>So, do you choose Minecraft Java Edition or Minecraft Bedrock Edition? Well, there are reasons for both, and I'll cover why you might choose one or another. But, this might be a little bit biased because I am a massive Java player on Prism.</p>
 
         <h1>Bedrock Edition</h1>
