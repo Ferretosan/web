@@ -815,7 +815,7 @@ body.page-music {
   margin: 0 0 16px;
 }
 
-.musicServices {
+.socialRow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -824,7 +824,7 @@ body.page-music {
   margin: 16px auto 0;
 }
 
-.musicServices .headingButton.small {
+.socialRow .headingButton.small {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -836,15 +836,17 @@ body.page-music {
   border: 2px solid var(--accent);
   border-radius: 5px;
   transition: all 200ms ease;
+  /* Override the global .aboutMe a origin so each item scales from its centre. */
+  transform-origin: center;
 }
 
-.musicServices .headingButton.small:hover,
-.musicServices .headingButton.small:focus-visible {
+.socialRow .headingButton.small:hover,
+.socialRow .headingButton.small:focus-visible {
   background-color: var(--panel-alt);
   transform: scale(1.1);
 }
 
-.musicServices .headingButton.small img {
+.socialRow .headingButton.small img {
   display: block;
   height: 24px;
   width: auto;
